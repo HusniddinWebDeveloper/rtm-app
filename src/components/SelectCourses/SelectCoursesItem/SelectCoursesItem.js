@@ -12,7 +12,7 @@ import {FiChevronRight} from "react-icons/fi";
 const SelectCoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, students, lessons, news, date }) => {
     return (
         <>
-         <div className={news ? "" : "col-md-4 col-sm-6 col-xs-12"} style={news ? {padding: "10px"} : {}}>
+         <div className={news ? "" : "col-md-4 col-sm-6 col-xs-12"}>
          	<div className={news ? `${classes.SelectCoursesItem} ${classes.News}` : classes.SelectCoursesItem} >
          		<div className={classes.SelectCartImg} >
          			<a href={linkUrl}>

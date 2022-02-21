@@ -164,4 +164,7 @@
 		width: 100%;
 		height: 500px;
 	}
+	.QuestionWrapper {
+		padding: 50px 10px;
+	}
 }
