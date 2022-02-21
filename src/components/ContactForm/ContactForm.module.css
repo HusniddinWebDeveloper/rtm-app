@@ -76,6 +76,10 @@
 	font-weight: 500;
 }
 
+.mapsContact {
+	height: 485px;
+}
+
 @media (max-width: 48em) {
 	.FormContent form >input {
 		flex-basis: 100%;
@@ -85,5 +89,6 @@
 	}
 	.mapsContact {
 		margin-bottom: 2rem;
+		height: 250px;
 	}
 }

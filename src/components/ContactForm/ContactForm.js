@@ -10,7 +10,7 @@ const ContactForm = ({ className }) => {
         			<div className="col-md-6 col-sm-12 col-xs-12">
     				   <YMaps>
 					    <div className={classes.mapsContact}>
-					      <Map width="100%" height="485px" defaultState={{ 
+					      <Map width="100%" height="100%" defaultState={{ 
 					      		center: [40.441056, 71.716999], 
 					      		zoom: 17,
 					      		control: [], 
