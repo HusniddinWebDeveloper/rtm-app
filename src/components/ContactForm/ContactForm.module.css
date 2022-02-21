@@ -1,0 +1,89 @@
+.ContactForm {
+	background-color: rgb(249, 248, 248);
+}
+
+.FormContent {
+	width: 100%;
+	padding-left: 70px;
+}
+
+.FormTitle {
+	margin-bottom: 35px;
+}
+
+.FormTitle h3 {
+	font-family: nunito, sans-serif;
+	color: rgb(16,16,16);
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.FormTitle p {
+	font-family: rubik, sans-serif;
+	color: rgb(51,51,51);
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.FormContent form {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: space-between; 
+}
+
+.FormContent form >button,
+.FormContent form >textarea {
+	width: 100%;
+	flex-basis: 100%;
+}
+
+.FormContent form >input {
+	flex-basis: 47%;
+}
+
+.FormContent form >textarea ,
+.FormContent form >input {
+	padding: 14px 10px;
+	background-color: #fff;
+	margin-bottom: 30px;
+	outline: none;
+	border: 1px solid #F1F1F1;
+	box-shadow: 0px 28px 50px 0px rgb(0 0 0 / 5%);
+	border-radius: 3px;
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	color: rgb(54, 54, 54);
+}
+
+.FormContent form >textarea {
+	height: 120px;
+}
+
+.FormContent form > button {
+	padding: 1rem 0;
+	border-radius: 3px;
+	background-color: rgb(255, 84, 33);
+	color: #fff;
+	border: 0;
+	text-transform: uppercase;
+	cursor: pointer;
+	box-shadow: 0px 28px 50px 0px rgb(0 0 0 / 5%);
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+@media (max-width: 48em) {
+	.FormContent form >input {
+		flex-basis: 100%;
+	}
+	.FormContent {
+		padding: 10px;
+	}
+	.mapsContact {
+		margin-bottom: 2rem;
+	}
+}

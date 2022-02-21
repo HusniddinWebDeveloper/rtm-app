@@ -1,0 +1,44 @@
+.TitleWrapper {
+    margin: 80px 0 50px 0;
+}
+
+.Subtitle {
+	text-align: center;
+}
+
+.Subtitle span {
+	font-weight: 400;
+    margin: 0 0 10px;
+    display: block;
+    color: #ff5421;
+    line-height: 28px;
+    font-family: rubik,sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+} 
+
+.Title {
+	text-align: center;
+}
+
+.Title h3 {
+	color: #101010;
+    font-family: "nunito",sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    width: 670px;
+    margin: 0 auto;
+}
+
+@media (max-width: 560px) {
+    .Title h3 {
+        font-size: 25px;
+    }
+    .Subtitle span {
+        font-size: 14px;
+    }
+    .Title h3 {
+        width: 100%;
+    }
+}

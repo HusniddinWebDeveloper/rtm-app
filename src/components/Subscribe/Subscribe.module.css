@@ -1,0 +1,106 @@
+.Subscibe {
+	background-color:rgb(249, 248, 248);
+}
+
+.SubscibeContent {
+	position: absolute;
+	bottom: -50%;
+	left: 0;
+	width: 100%;
+	padding: 60px 70px;
+	background-color: rgb(23, 31, 50);
+	box-shadow: 0 0 30px rgb(0 0 0 / 30%);
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row nowrap;
+}
+
+.SubscribeLabel {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+}
+
+
+.SubscribeLabel > img {
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+}
+
+
+.SubscribeLabel h2 {
+	font-family: nunito, sans-serif;
+	font-size: 34px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.SubscibeForm {
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.SubscibeForm form {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap
+}
+
+.SubscibeForm input {
+	padding: 20px 30px;
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	color: #363636;
+	border:0px;
+	outline: none;
+}
+
+.SubscibeForm button {
+	padding: 20px 40px;
+	background-color: rgb(255, 84, 33);
+	cursor: pointer;
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	color: #Fff;
+	border: 0px;
+	outline: none;
+}
+
+
+@media (max-width: 48em) {
+	.SubscibeContent {
+		flex-flow: column nowrap; 
+		padding: 40px 20px;
+	}
+
+	.SubscribeLabel h2 {
+		font-size: 20px;
+	}
+
+	.SubscribeLabel {
+		padding-bottom: 20px;
+	}
+
+	.SubscribeLabel > img {
+		margin-right: 15px;
+	}
+
+	.SubscibeForm input {
+		padding: 20px 10px;
+		flex-basis: 70%;
+	}
+
+	.SubscibeForm button {
+		padding: 20px 20px;
+		flex-basis: 30%;
+	}
+
+	.SubscibeContent {
+		bottom: -60%;
+	}
+}

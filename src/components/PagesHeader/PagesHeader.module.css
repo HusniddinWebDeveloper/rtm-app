@@ -1,0 +1,41 @@
+.PagesHeader {
+	height: 575px;
+}
+
+.titleContent {
+	text-align: center;
+	padding-top: 170px;
+}
+
+.titleContent h1 {
+	color: #fff;
+	font-family: nunito, sans-serif;
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.linkSlash >span,
+.linkSlash a {
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	transition: all .4s ease-in-out 0s;
+}
+
+.slash {
+	margin: 0 10px;
+}
+
+.linkSlash a:hover {
+	color: #ff5421;
+}
+
+@media (max-width: 48em) {
+	.PagesHeader {
+		height: 445px;
+	}
+	.titleContent {
+		padding-top: 80px;
+	}
+}

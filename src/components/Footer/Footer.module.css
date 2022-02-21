@@ -1,0 +1,229 @@
+.Footer {
+	padding: 180px 0 30px 0;
+	background-color: rgb(21, 21, 21);
+}
+
+.imgConten {
+	padding-bottom: 20px;
+}
+
+.imgConten img {
+	width: 210px;
+	height: 35px;
+}
+
+.Description p {
+	color: #fff;
+	font-family: rubik, sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	margin-bottom: 30px;
+}
+
+.SocialMedia ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+}
+
+.SocialMedia ul li {
+	margin-right: 16px;
+}
+
+.SocialMedia ul li a {
+	color: #e0e0e0;
+	font-size: 21px;
+	transition: all .4s ease;
+	display: inline-block;
+}
+
+.SocialMedia ul li a:hover {
+	color: #FF5421;
+	transform: scale(.9);
+}
+
+h4.FooterTitle {
+	margin-bottom: 30px;
+	font-family: nunito, sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	position: relative;
+}
+
+h4.FooterTitle::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 40px;
+	height: 3px;
+	background-color: rgb(255, 84, 33);
+}
+
+.Address ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Address ul li {
+	padding-bottom: 20px;
+}
+
+.AddresName,
+.Address ul li a {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.AddresName span{
+	color: #fff;
+}
+
+.FooterNav li a,
+.CopyRight,
+.CopyRight > a,
+.AddresName span,
+.Address ul li a span{
+	color: #fff;
+	transition: all .4s ease;
+	font-family: rubik, sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.FooterNav li a:hover,
+.CopyRight > a:hover,
+.Address ul li a:hover span {
+	color: rgb(255, 84, 33);
+}
+
+.AddresName span:last-child,
+.Address ul li a span:last-child {
+	margin-left: 30px;
+	display: inline-block;
+}
+
+.Courses {
+	padding-left: 2rem;
+}
+
+.Courses ul li a span:first-child {
+	display: block;
+	height: 6px;
+	width: 6px;
+	background-color:rgb(255, 84, 33);
+}
+
+.postsItem {
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	margin-bottom: 20px;
+}
+.imgPosts {
+	width: 85px !important;
+	flex-basis: 60%;
+	height: 85px;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-right:15px;
+}
+
+.imgPosts > img {
+	width: 100%;
+	height: 100%;
+}
+
+.postsTitle a {
+	color: #fff;
+	transition: all .4s ease;
+	font-family: rubik, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.postsTitle a:hover {
+	color: rgb(255, 84, 33);
+
+}
+
+.DatePosts {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+}
+
+.DatePosts span:first-child {
+	margin-right: 10px;
+	color: rgb(255, 84, 33);
+	margin-top: 3px;
+}
+
+.DatePosts span {
+	color: #fff;
+	font-family: rubik, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.FooterBottom {
+	border-top: 1px solid #c3c3c3;
+	padding: 2rem 0 0 0;
+}
+
+.CopyRight {
+	color: #Fff;
+}
+
+.FooterNav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-flow: row nowrap
+}
+
+.FooterNav li:first-child {
+	list-style: none;
+}
+
+.FooterNav li {
+	margin-left: 1.6rem;
+	color: rgb(255, 84, 33);
+}
+
+.FooterNav  li a {
+	color: #fff;
+}
+
+
+@media (max-width: 48em) {
+	.Footer {
+		padding:  180px 0 30px 2rem;
+	}
+	.Courses {
+		padding-left: 0;
+		margin-bottom: 2rem;
+	}
+	.Address {
+		margin: 2rem 0;
+	}
+
+	.FooterNav {
+		justify-content: flex-start;
+		margin-top: 1.5rem;
+	}
+
+	.FooterNav li:first-child {
+		list-style: none;
+		margin: 0;
+	}
+}

@@ -1,0 +1,91 @@
+.NavTop {
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ContentNavTop {
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row nowrap;
+}
+
+.Right,
+.Left {
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	height: 100%;
+}
+
+.Gmail {
+	height: 100%;
+	padding-right: 20px;
+	margin-right: 20px;
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.apply >a,
+.Right .LogIn a,
+.location span,
+.Gmail a {
+	color: #fff;
+	font-family: rubik, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	transition: all .4s ease-in-out 0s;
+}
+
+.Right .LogIn a:hover,
+.Gmail a:hover {
+	color: #FF5421;
+}
+
+.Right .LogIn a,
+.location span,
+.Gmail a {
+	display: block;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+}
+
+.Right .LogIn a > span,
+.location span > span,
+.Gmail a >span {
+	margin: 7px 8px 0 0;
+	display: inline-block;
+	font-size: 18px;
+}
+
+.Right .LogIn {
+	padding-right: 25px;
+}
+
+.apply {
+	height: 100%;
+}
+
+.apply >a {
+	display: inline-block;
+	line-height: 50px;
+	height: 100%;
+	background-color: #FF5421;
+	text-transform: uppercase;
+	padding: 0 35px;
+}
+
+.apply >a:hover {
+	background-color: rgb(255, 84, 33);
+}
+
+@media (max-width: 48em) {
+	.NavTop {
+		display: none;
+	}
+}

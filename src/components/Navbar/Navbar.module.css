@@ -1,0 +1,226 @@
+:root {
+	--default-color: #212529;
+	--active-color: #ff5421;
+	--fixed-color: #101010;
+}
+
+.FixedNavbar {
+	height: 92px;
+	background-color: transparent;
+	transition: all .4s ease;
+}
+
+.FixedNavbar.Default {
+	height: 92px;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	background-color: transparent;
+	transition: all .4s ease;
+}
+
+.FixedNavbar.Active {
+	height: 92px;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	box-shadow: 0 0 20px -10px rgba(0,0,0,.8);
+	background-color: #fff;
+	z-index: 99 !important;
+	transition: all .4s ease;
+}
+
+.Navbar ul {
+	height: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-flow: row nowrap;
+	transition: all .4s ease;
+}
+
+.Navbar ul li {
+	margin-left: 3rem;
+	height: 100%;
+	line-height: 92px
+}
+
+.FixedNavbar .Navbar ul li a {
+	color: #fff;
+}
+
+.Navbar ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--default-color);
+    text-align: left;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out 0s;
+}
+
+.FixedNavbar.Active .Navbar ul li a:hover,
+.FixedNavbar.Default .Navbar ul li a:hover,
+.Navbar ul li a:hover {
+	color: var(--active-color);
+}
+
+.FixedNavbar.Active .Navbar ul li a.Active,
+.FixedNavbar.Default .Navbar ul li a.Active,
+.Navbar ul li a.Active {
+	color: var(--active-color);
+}
+
+.MenuNav {
+	display: none;
+	height: 100%;
+	line-height: 92px;
+	text-align: end;
+}
+
+.FixedNavbar.Active .Navbar ul li a {
+	color: #000;
+}
+
+.FixedNavbar.Active .MenuIcon {
+	color: #000;
+}
+
+.MenuIcon {
+	display: inline-block;
+	margin-top: 4px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.LogoDark {
+	height: 100%;
+	line-height: 100px;
+}
+
+.LogoLite {
+	height: 100%;
+	line-height: 120px;
+}
+
+.LogoLite img.Lite {
+	width: 210px;
+	height: 35px;
+}
+
+.LogoDark img.Dark {
+	width: 150px;
+	height: 25px;
+}
+
+.Backdrop {
+	display: none;
+}
+.closeIcon {
+	display: none;
+}
+
+@media (max-width: 48em) {
+	.MenuNav {
+		display: block;
+		text-align: end;
+		margin-left: auto;
+	}
+
+	.Navbar {
+		text-align: end;
+	}
+
+	.FixedNavbar {
+		width: 100% !important;
+		left: 0 !important;
+		top: 0 !important;
+	}
+
+	.FixedNavbar.Active .Navbar ul,
+	.FixedNavbar.Default .Navbar ul,
+	.Navbar ul {
+		width: 95%;
+		height: 100vh;
+		position: fixed;
+		right: -100%;
+		top: 0;
+		background-color: #fff;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding: 5rem 30px 0 30px;
+		z-index: 99;
+		transition: all .8s ease;
+	}
+
+	.FixedNavbar.Active .Navbar ul.active,
+	.FixedNavbar.Default .Navbar ul.active,
+	.Navbar ul.active {
+		right: 0;
+	}
+
+	.FixedNavbar.Active .Navbar ul li ,
+	.FixedNavbar.Default .Navbar ul li ,
+	.Navbar ul li {
+		height: 50px;
+		width: 100%;
+		margin: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	}
+
+	.FixedNavbar.Active .Navbar ul li a,
+	.FixedNavbar.Default .Navbar ul li a,
+	.Navbar ul li a {
+		color: rgb(51,51,51) !important;
+		display: block !important;
+		width: 100% !important;
+		height: 100% !important;
+		line-height: 50px;
+	}
+	.FixedNavbar.Active .Navbar ul li a:hover,
+	.FixedNavbar.Default .Navbar ul li a:hover,
+	.Navbar ul li a:hover {
+		color: var(--active-color) !important;
+	}
+	.FixedNavbar.Active .Navbar ul li a.Active,
+	.FixedNavbar.Default .Navbar ul li a.Active,
+	.Navbar ul li a.Active {
+		color: var(--active-color) !important;
+	}
+
+	.closeIcon {
+		display: block;
+		position: absolute;
+		left: 30px;
+		top: 30px;
+	}
+	.closeIcon >span {
+		font-size: 40px;
+		color: var(--active-color);
+		cursor: pointer;
+		border-radius: 50%;
+	}
+	.Backdrop {
+		display: block;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		height: 100vh;
+		left: -100%;
+		background-color: rgb(0,0,0,.5);
+		transition: all .8s ease;								
+	}
+
+	.Backdrop.active {
+		left: 0;
+	}
+}

@@ -1,0 +1,50 @@
+.contactInfo {
+	background-color: rgb(249, 248, 248);
+	padding: 100px 0 80px 0;
+}
+
+.contactCart {
+	padding: 50px 40px;
+	height: 260px;
+	width: 100%;
+	border-radius: 5px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
+}
+
+.imgContent {
+	width: 100%;
+	text-align: center;
+}
+
+.imgContent > img {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.Description h4 {
+	font-family: nunito, sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	color: rgb(16, 16, 16);
+	text-align: center;
+	margin: 15px 0 5px 0;
+}
+
+.Description a,
+.Description span {
+	color: rgb(23, 31, 50);
+	font-family: nunito, sans-serif;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+@media (max-width: 64em ) {
+	.contactCart {
+		margin-bottom: 2em;
+	}
+}

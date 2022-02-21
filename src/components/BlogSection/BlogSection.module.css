@@ -1,0 +1,271 @@
+.BlogSection {
+	background-color:rgb(249, 248, 248);
+	padding: 100px 0 50px 0;
+}
+
+.articleBlog {
+	overflow-y: scroll;
+	height: 1000px;
+	-ms-overflow-style: none;
+}
+
+.articleBlog::-webkit-scrollbar{
+	width: 0;
+	display: none;
+}
+
+.BlogItem {
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+
+.ImgContent {
+	height: 460px;
+}
+
+.ImgContent > img {
+	height: 100%;
+	width: 100%;
+}
+
+.Description {
+	padding: 35px 45px 45px 45px;
+}
+
+.Description > a.titleLink {
+	font-size: 24px;
+	letter-spacing: -1px;
+	margin-bottom: 13px;
+	display: block;
+}
+
+.Description > a {
+	font-family: nunito, sans-serif;
+	color: rgb(16,16,16);
+	font-weight: 700;
+	transition: all .4s ease;
+}
+
+.BlogNav div > a:hover,
+.Description > a:hover {
+	color: #FF5421;
+}
+
+.BlogNav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+	margin-bottom: 22px;
+}
+
+.BlogNav div > a > span:first-child,
+.BlogNav div > span:first-child {
+	color:  #FF5421;
+	margin-right: 8px;
+	margin-top: 3px;
+}
+
+.BlogNav div > a ,
+.BlogNav div >span {
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: rgb(85, 85, 85);
+}
+
+.BlogNav div {
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+}
+
+.Description p {
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: rgb(51, 51, 51);
+	margin-bottom: 15px;
+}
+
+.showMore {
+	transition: all .4s ease;
+}
+
+.showMore:hover >span:last-child {
+	transform: translate(3px, 4px);
+}
+
+.showMore > span:last-child {
+	transform: translate(0, 4px);
+	display: inline-block;
+	transition: transform .4s ease;
+	font-size: 16px;
+}
+
+.searchForm {
+	margin-bottom: 48px;
+}
+
+.searchForm form {
+	border: 1px solid rgb(239, 239, 239);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+	overflow: hidden;
+	height: 50px;
+}
+
+.searchForm form input {
+	display: block;
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: rgb(68, 68, 68);
+	height: 100%;
+	border: 0;
+	padding-left: 17px;
+	width: calc(100% - 50px);
+}
+
+.searchForm form button {
+	width: 55px;
+	height: 100%;
+	border: 0;
+	display: block;
+	border: 0;
+	background-color: #ff5421;
+	color: #fff;
+	font-size: 20px;
+	padding-top: 3px;
+	cursor: pointer;
+}
+
+.CategoriesTitle,
+.titleRecent {
+	padding-bottom: 12px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.CategoriesTitle h4,
+.titleRecent h4 {
+	font-family: nunito, sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.CategoriesTitle::after,
+.titleRecent::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 50px;
+	background-color: rgb(255, 84, 33);
+}
+
+.Tags ul,
+.Categories ul,
+.recenPosts ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Categories ul li a,
+.recenPosts ul li a {
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: rgb(16, 16, 16);
+	transition: all .4s ease;
+	display: flex;
+}
+
+.recenPosts ul li {
+	margin-top: 18px;
+	padding-top: 18px;
+	border-top: 1px solid #ccc;
+}
+
+.recenPosts ul li:first-child {
+	border-top:	0;
+}
+
+.recenPosts ul li a >span {
+	display: block;
+}
+
+.Categories ul li a:hover,
+.recenPosts ul li a:hover {
+	color: #FF5421;
+}
+
+.Categories {
+	margin-top: 48px;
+}
+
+.Categories ul li {
+	margin-bottom: 12px;
+}
+
+.Tags {
+	padding-top: 48px;
+	padding-right: 10px;
+}
+
+.Tags ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+
+.Tags ul li {
+	margin-right: 3px;
+	margin-top: 10px;
+	border: 1px solid rgb(240, 240, 240);
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.searchAside {
+	padding: 0 0 20px 40px;
+}
+
+.Tags ul li a {
+	font-family: rubik, sans-serif;
+	color: rgb(25,25,25);
+	font-size: 14px;
+	font-weight: 400;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all .4s ease;
+	padding: 6px 12px;
+	border-radius: 5px;
+}
+
+.Tags ul li a:hover {
+	background-color: #FF5421;
+	color: #fff;
+}
+
+@media (max-width: 48em) {
+	.articleBlog {
+		height: auto !important;
+	}
+	.BlogNav div > a ,
+	.BlogNav div >span {
+		font-size: 14px;
+	}
+	.Description {
+		padding: 35px 1rem 45px 1rem;
+	}
+}

@@ -1,0 +1,288 @@
+.searchCourses {
+	padding: 100px 0;
+	background-color:rgb(249, 248, 248);
+}
+
+.searchForm > form,
+.resultContent {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+	padding:5px 0 5px 12px;
+	box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+	background-color: #fff;
+	height: 55px;
+	border-radius: 5px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 1rem;
+}
+
+.rowGrid,
+.column {
+	box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+	background-color: #fff;
+	width: 44px;
+	height: 36px;
+	border-radius: 2px;
+	transition: all 300ms ease;
+	margin-right: 10px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.ResInfo {
+	margin-left: 10px;
+}
+
+.column.active,
+.rowGrid.active {
+	background-color: #ff5421;
+}
+
+.column >span,
+.rowGrid > span {
+	color: #161616;
+}
+
+.column.active >span,
+.rowGrid.active > span {
+	color: #fff;
+}
+
+.ResInfo span{
+	font-family: "rubik", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: rgb(51, 51, 51);
+}
+
+.searchInput {
+	flex-basis: 90%;
+	height: 100%;
+}
+
+.searchInput > input {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding-left: 13px;
+	font-family: rubik, sans-serif;
+	font-size: 14px;
+	outline: none;
+}
+
+.searchBtn {
+	height: 100%;
+	flex-basis: 10%;
+}
+
+
+.searchBtn button {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 70px;
+	border: 0;
+	background-color: #ff5421;
+	color: #fff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 20px;
+	padding-top: 3px;
+	cursor: pointer;
+}
+
+.coursesGrid {
+	margin-top: 1rem;
+}
+
+.SelectCoursesItem {
+	width: 100%;
+	box-shadow: 0 0 30px #eee;
+	background-color: #fff;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+	box-shadow: 0 0 8px 2px rgba(0,0,0,0.1);
+	transition: all .8s ease;
+	padding: 1.8rem;
+}
+
+.SelectCoursesItem.active {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}	
+
+.SelectCoursesItem.active .SelectCartImg {
+	flex-basis: 40%;
+}
+
+.SelectCoursesItem.active .SelectCartDescription {
+	padding-left: 3rem;
+	flex-basis: 40%;
+}
+
+
+.SelectCartImg {
+	width: 100%;
+	height: 220px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 5px;
+}
+
+.resize {
+	width: 100%;
+	height: 100%;
+	transition: all .3s ease;
+	border-radius: 4px 4px 0 0;
+	overflow: hidden;
+	transform: scale(1.2);
+}
+
+.SelectCoursesItem:hover .resize {
+	transform: scale(1);
+}
+
+.SelectCoursesItem.News:hover {
+	transform: translateY(-10px);
+}	
+
+.resize img {
+	border-radius: 4px 4px 0 0;
+	width: 100%;
+	height: 100%;
+}
+
+.SelectCartPrice {
+	display: inline-block;
+	padding: 3px 15px;
+	background-color: rgb(255, 84, 33);
+	font-family: "rubik", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.SelectCartDescription {
+	padding: 35px 0 0 0;
+	flex-basis: 50%;
+}
+
+.NameItem {
+	display: inline-block;
+	margin-left: 10px;
+	font-family: rubik, sans-serif;
+	font-size: 14px;
+	color: rgb(51,51,51);
+	font-weight: 500;
+}
+
+.SelectCartRaiting {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+}
+
+.star {
+	margin-right: 5px;
+	color: #ccc;
+}
+
+.starInfo span {
+	font-size: rgb(51, 51, 51);
+	font-family: "rubik", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.SelectCartTitle {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.SelectCartTitle a {
+	font-family: "nunito", sans-serif;
+	font-size: 22px;
+	letter-spacing: -1px;
+	text-decoration: none;
+	color: rgb(16, 16, 16);
+	font-weight: 700;
+	line-height: 30px;
+	transition: all .4s ease;
+}
+
+.SelectCartTitle a:hover {
+	color: #ff5421;
+}
+
+.SelectCartFooter {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 25px;
+}
+
+.SelectCartFooter > div{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.SelectCartFooter > div > span:last-child {
+	color: rgb(51, 51, 51);
+	font-family: "rubik", sans-serif;
+	font-size: 14px ;
+	font-weight: 400;
+}
+
+.SelectCartFooter > div > span:first-child {
+	display: inline-block;
+	color: #161616;
+	margin-top: 3px;
+	margin-right: 5px;
+	font-size: 14px ;
+}
+
+.SelectCartFooter > div > a {
+	color: rgb(51, 51, 51);
+	font-family: "rubik", sans-serif;
+	font-size: 14px ;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	transition: all .4s ease;
+	border: 1px solid rgb(242, 242, 242);
+	padding: 8px 10px;
+	border-radius: 3px;
+}
+
+.SelectCartFooter > div > a:hover {
+	color: #fff;
+	background-color: #ff5421;
+}
+
+.SelectCartFooter > div > a > span {
+	font-size: 17px;
+	display: inline-block;
+	margin: 3px 0 0 3px;
+}
+
+@media (max-width: 48em) {
+	.SelectCoursesItem.active .SelectCartImg  {
+		width: 100%;
+		height: 95px;
+		object-fit: cover;
+	}
+}

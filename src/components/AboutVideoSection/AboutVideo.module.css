@@ -1,0 +1,86 @@
+.videoContent {
+	height: 570px;
+	background-image: url("../../assets/imgs/about-imgs/about-videbg.png"); 
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.playingContent {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.playingContent > span:first-child{
+	display: inline-block;
+	height: 80px;
+	width: 80px;
+	background-color: rgb(255, 84, 33);
+	border-radius: 50%;
+	text-align: center;
+	line-height: 80px;
+}
+
+.playingContent > span:first-child span {
+	position: relative;
+	z-index: 9;
+	display: inline-block;
+	font-size: 35px;
+	margin: 3px 0 0 3px;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+.playingContent > span:first-child::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+ 	background-color: rgb(255, 84, 33);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  z-index: 2;
+  border-radius: 50%;
+  -webkit-animation: sc-anim 1500ms ease-out infinite;
+          animation: sc-anim 1500ms ease-out infinite;
+}
+
+@-webkit-keyframes sc-anim {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes sc-anim {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 48em) {
+	.videoContent {
+		background-size: cover;
+	}
+}
