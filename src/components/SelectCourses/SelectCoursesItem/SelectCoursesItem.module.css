@@ -149,3 +149,9 @@
 	display: inline-block;
 	margin: 3px 0 0 3px;
 }
+
+@media (max-width: 48em) {
+	.SelectCartTitle a {
+		font-size: 18px;
+	}
+}
