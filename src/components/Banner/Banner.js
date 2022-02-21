@@ -26,7 +26,6 @@ const Banner = ({ className }) => {
 				        reverseDirection={true}
 				        modules={[Autoplay,Navigation]}
 				        className="mySwiper"
-
 				        
 				      >
 				        <SwiperSlide>

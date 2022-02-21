@@ -268,4 +268,18 @@
 	.Description {
 		padding: 35px 1rem 45px 1rem;
 	}
+	.searchAside {
+		padding: 0 0 20px 5px;
+	}
+	.BlogNav div > a > span:first-child,
+	.BlogNav div > span:first-child {
+		margin-right: 4px;
+	}
+	.BlogNav div {
+		margin-right: 5px;
+	}
+	.BlogNav div > a ,
+	.BlogNav div >span {
+		font-size: 11px;
+	}
 }
