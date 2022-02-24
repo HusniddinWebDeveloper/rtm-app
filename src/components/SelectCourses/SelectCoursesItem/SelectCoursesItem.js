@@ -9,7 +9,7 @@ import {FiChevronRight} from "react-icons/fi";
 
 
 
-const SelectCoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, students, lessons, news, date }) => {
+const SelectCoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, students, lessons, news, date, stars }) => {
     return (
         <>
          <div className={news ? "" : "col-md-4 col-sm-6 col-xs-12"}>
@@ -31,11 +31,9 @@ const SelectCoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, students
                                      <div className={classes.starInfo} ><span>{date}</span></div>
                                  </> :
                                  <>
-                                     <div className={classes.star} ><BsFillStarFill /></div>
-                                     <div className={classes.star} ><BsFillStarFill /></div>
-                                     <div className={classes.star} ><BsFillStarFill /></div>
-                                     <div className={classes.star} ><BsFillStarFill /></div>
-                                     <div className={classes.star} ><BsFillStarFill /></div>
+                                     {stars.map((item,index) => {
+                                       return <div key={index} className={item ? `${classes.star} ${classes.active}` : classes.star} ><BsFillStarFill /></div>
+                                     })}
                                      <div className={classes.starInfo} ><span>{raiting}</span></div>
                                  </> 
                          }

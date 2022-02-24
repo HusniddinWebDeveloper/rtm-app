@@ -197,6 +197,10 @@
 	color: #ccc;
 }
 
+.star.active {
+	color: rgb(255, 84, 33);
+}
+
 .starInfo span {
 	font-size: rgb(51, 51, 51);
 	font-family: "rubik", sans-serif;

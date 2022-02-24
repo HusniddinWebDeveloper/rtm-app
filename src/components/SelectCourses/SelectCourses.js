@@ -22,7 +22,8 @@ const SelectCourses = () => {
                                         price={item.price}
                                         raiting={item.raiting}
                                         students={item.students}
-                                        lessons={item.lessons}  />
+                                        lessons={item.lessons}
+                                        stars={item.stars}  />
                         })}
 	    			</div>
 	    			<div className={classes.CoursesBtn} >

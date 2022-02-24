@@ -16,7 +16,7 @@ const Clients = ({ className }) => {
 	    loop: true,
 	    dots: true,
 	    margin: 30,
-	    dotsEach: 1,
+	    dotsEach: true,
 	    responsive:{
                     400:{
                         items:1,

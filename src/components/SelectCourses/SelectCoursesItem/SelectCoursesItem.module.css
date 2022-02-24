@@ -67,6 +67,10 @@
 
 .star {
 	margin-right: 5px;
+	color: #ccc;
+}
+
+.star.active {
 	color: rgb(255, 84, 33);
 }
 

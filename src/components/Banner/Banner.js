@@ -23,7 +23,7 @@ const Banner = ({ className }) => {
 				        }}
 				        navigation={true}
 				        loop={true}
-				        reverseDirection={true}
+				        option={{reverseDirection: true}}
 				        modules={[Autoplay,Navigation]}
 				        className="mySwiper"
 				        

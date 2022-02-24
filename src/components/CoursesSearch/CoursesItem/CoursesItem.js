@@ -5,7 +5,7 @@ import {FaRegUser} from "react-icons/fa";
 import {BiRightArrowAlt} from "react-icons/bi";
 import {useSelector} from "react-redux";
 
-const CoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, name, lessons, news, date }) => {
+const CoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, name, people, news, date, stars }) => {
     const gridTrue = useSelector((store) => store.data.grid);
     return (
         <>
@@ -28,14 +28,12 @@ const CoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, name, lessons,
                      className={classes.SelectCartFooter} >
                          <div>
                              <span><FaRegUser /></span> 
-                             <span>{lessons}</span>
+                             <span>{people}</span>
                          </div>
                          <div className={classes.SelectCartRaiting}>
-                             <div className={classes.star} ><BsFillStarFill /></div>
-                             <div className={classes.star} ><BsFillStarFill /></div>
-                             <div className={classes.star} ><BsFillStarFill /></div>
-                             <div className={classes.star} ><BsFillStarFill /></div>
-                             <div className={classes.star} ><BsFillStarFill /></div>
+                             {stars.map((item,index) => {
+                               return <div key={index} className={item ? `${classes.star} ${classes.active}` : classes.star} ><BsFillStarFill /></div>
+                             })}
                              <div className={classes.starInfo} ><span>{raiting}</span></div>
                          </div>
                          <div>

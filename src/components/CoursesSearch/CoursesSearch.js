@@ -58,7 +58,8 @@ const CoursesSearch = ({ className }) => {
                                             price={item.price}
                                             raiting={item.raiting}
                                             name={item.name}
-                                            lessons={item.lessons}
+                                            people={item.people}
+                                            stars={item.stars}
                                             />
                             })}
                     </div>

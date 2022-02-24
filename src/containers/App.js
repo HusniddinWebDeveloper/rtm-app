@@ -6,15 +6,14 @@ import { Provider } from "react-redux";
 
 function App() {
 	return (
-		<Provider store={store}>
-			<BrowserRouter>
-				<div className="App">
-			      <Layout />
-			    </div>
-			</BrowserRouter>
-		</Provider>	
+		<BrowserRouter>
+			<Provider store={store}>
+					<div className="App">
+				      <Layout />
+				    </div>
+			</Provider>	
+		</BrowserRouter>
   );
 }
 
-// https://keenitsolutions.com/products/wordpress/educavo/
 export default App;
