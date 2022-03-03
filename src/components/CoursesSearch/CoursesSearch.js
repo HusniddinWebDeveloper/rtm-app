@@ -14,6 +14,7 @@ const CoursesSearch = ({ className }) => {
     const [filter, setFilter] = useState(data);
     const inputRef = useRef(null);
     const search = (e) => {
+		e.preventDefault();
         setFilter(data.filter((item) => {
             return item.linkText.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
             item.name.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g'));
@@ -42,12 +43,12 @@ const CoursesSearch = ({ className }) => {
         			</div>
         			<div className="col-md-6 col-xs-12 center-xs">
         				<div className={classes.searchForm} >
-        					<form>
+        					<form onSubmit={search}>
         						<div className={classes.searchInput} >
-        							<input type="search" onChange={search} ref={inputRef} name="search" placeholder="Search our courses" />
+        							<input type="text" onChange={search} ref={inputRef} name="search" placeholder="Search our courses" />
         						</div>
         						<div className={classes.searchBtn}>
-        							<button type="submit">
+        							<button onClick={search}>
         								<FaSearch />
         							</button>
         						</div>
@@ -57,7 +58,7 @@ const CoursesSearch = ({ className }) => {
         		</div>
                 <div className={classes.coursesGrid} >
                     <div className="row">
-                        {filter.map((item,index) => {
+						{filter.length > 0 ? filter.map((item,index) => {
                                 return <CousesItem 
                                             key={item.id}
                                             imgUrl={item.imgUrl} 
@@ -70,7 +71,10 @@ const CoursesSearch = ({ className }) => {
                                             stars={item.stars}
                                             delay={index}
                                             />
-                            })}
+                            }) : 
+							<span>Kurslar topilmadi</span>
+							}
+                        {}
                     </div>
                 </div>
         	</div>

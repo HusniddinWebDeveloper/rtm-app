@@ -289,4 +289,16 @@
 		height: 95px;
 		object-fit: cover;
 	}
+
+	.SelectCoursesItem.active .SelectCartImg { 
+		flex-basis: 60%;
+	}
+
+	.SelectCoursesItem.active .SelectCartDescription {
+		padding-left: 10px;
+	}
+
+	.SelectCoursesItem {
+		padding: 10px;
+	}
 }

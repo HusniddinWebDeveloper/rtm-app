@@ -18,6 +18,13 @@
     text-transform: uppercase;
 } 
 
+.Title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+}
+
 .Title h3 {
     font-family: Roboto;
     font-style: normal;

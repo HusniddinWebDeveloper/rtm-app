@@ -4,6 +4,7 @@ import RahbaryatItem from "../ExpertTeacherSection/ExperTeachersItem/ExperTeache
 import Rahbaryat from "./HdoimlarData";
 import OwlCarousel from 'react-owl-carousel2';
 import '../owlCarouselCss/owlCarousel.css';
+import { IoIosPeople } from "react-icons/io"
 
 
 
@@ -32,7 +33,7 @@ const Hodimlar = ({ className }) => {
 
     return (
         <section style={{paddingBottom: "2rem",}}>
-        	<Title title={"Hodimlar"} colorTitle={"#18377D"} />
+        	<Title icon={<IoIosPeople />} title={"Hodimlar"} colorTitle={"#18377D"} />
         	<div className="container">
                 <div className="row">
         			<OwlCarousel options={options} >
