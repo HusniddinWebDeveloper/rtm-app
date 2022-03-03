@@ -12,10 +12,9 @@ import Footer from "../../components/Footer/Footer";
 const About = ({ scrollY }) => {
     return (
         <>
-        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"About Us"} link={"Home"} about={true} />
+        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Haqida"} link={"Asosiy"} haqimizda={true} />
         	<AboutInfo />
         	<AboutVideoSection />
-        	<ExperTeachers />
             <StudentsSaying />
             <AboutNews />
         	<Subscribe />

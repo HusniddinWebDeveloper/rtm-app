@@ -8,11 +8,11 @@ const ExpertTeachers = () => {
 	const [data] = useState(TeacherData);
     return (
         <section className={classes.EpertTeacher}>
-           <Title subtitle={"INSTRUCTOR"} title={"Expert Teachers"} colorSubtitle={"#ff5421"} colorTitle={"#101010"} />
+           <Title subtitle={"INSTRUCTOR"} title={"Expert Teachers"} colorSubtitle={"#00a85a"} colorTitle={"#101010"} />
         	<div className="container">
         		<div className="row">
         			{
-        				data.map(({id,imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin}) => {
+        				data.map(({id,imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin},index) => {
         				 return	<ExperTeacherItem 
         									key={id}
         									imgUrl={imgUrl}
@@ -21,7 +21,8 @@ const ExpertTeachers = () => {
         									ggurl={ggurl}
         									TwUrl={TwUrl}
         									fsbook={fsbook}
-        									linkedin={linkedin}/>
+        									linkedin={linkedin}
+                                            delay={index}/>
         									
         				})
         			}

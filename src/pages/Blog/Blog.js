@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 const Blog = ({ scrollY }) => {
     return (
         <>
-        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Blog"} link={"Home"} blog={true} />
+        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Blog"} link={"Asosiy"} blog={true} />
         	<BlogSection />
         	<Subscribe />
 	        <Footer />

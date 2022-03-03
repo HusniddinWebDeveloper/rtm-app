@@ -16,7 +16,7 @@ const StudentsSaying = ({ className }) => {
 	    loop: true,
 	    dots: true,
 	    margin: 30,
-	    dotsEach: 2,
+	    dotsEach: 2 > 0,
 	    responsive:{
                     400:{
                         items:1,
@@ -31,7 +31,7 @@ const StudentsSaying = ({ className }) => {
 	   };
     return (
         <section className={classes.StudentsSection}>
-        	<Title subtitle={"STUDENT REVIEWS"} title={"What Our Students Says"} colorSubtitle={"#ff5421"} colorTitle={"#101010"} />
+        	<Title title={"What Our Students Says"} colorTitle={"#18377D"} />
         	<div className="container">
         		<div className="row">
         			<div className="col-md-12 col-xs-12 center-xs">

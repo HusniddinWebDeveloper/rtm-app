@@ -8,7 +8,7 @@ import img from "../../assets/imgs/AboutNewsImgs/posts1.jpg";
 const AboutNews = ({ className }) => {
     return (
         <section className={classes.AboutNews}>
-        	<Title subtitle={"NEWS UPDATE"} title={"Read Latest News"} colorSubtitle={"#ff5421"} colorTitle={"#101010"} />
+        	<Title subtitle={"NEWS UPDATE"} title={"Read Latest News"} colorSubtitle={"#00a85a"} colorTitle={"#101010"} />
         	<div className="container">
         		<div className="row" >
         			<div className="col-md-6">

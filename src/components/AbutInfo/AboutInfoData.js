@@ -8,27 +8,45 @@ export default function CoursesData() {
 	 return [
             {
                id: Math.random(),
-               imgUrl: img1,
-               prasent: "320+",
-               name: "Courses"
-            },
-            {
-               id: Math.random(),
-               imgUrl: img2,
-               prasent: "7.5k+",
-               name: "Students"
+               imgUrl: img4,
+               prasent: "%",
+               name: "Certified",
+               end: 310,
             },
             {
                id: Math.random(),
                imgUrl: img3,
-               prasent: "3.50",
-               name: "Average CGPA"
+               prasent: "",
+               name: "Average CGPA",
+               end: 3.50,
             },
             {
                id: Math.random(),
                imgUrl: img4,
-               prasent: "95%",
-               name: "Certified"
+               prasent: "%",
+               name: "Certified",
+               end: 95,
+            },
+            {
+               id: Math.random(),
+               imgUrl: img4,
+               prasent: "%",
+               name: "Certified",
+               end: 310,
+            },
+            {
+               id: Math.random(),
+               imgUrl: img3,
+               prasent: "",
+               name: "Average CGPA",
+               end: 3.50,
+            },
+            {
+               id: Math.random(),
+               imgUrl: img4,
+               prasent: "%",
+               name: "Certified",
+               end: 95,
             },
          ];
 }

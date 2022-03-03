@@ -3,7 +3,8 @@ import classes from "./ContactInfo.module.css";
 import {Link} from "react-router-dom";
 import img1 from "../../assets/imgs/contactImgs/address.png";
 import img2 from "../../assets/imgs/contactImgs/open-email.png";
-import img3 from "../../assets/imgs/contactImgs/smartphone.png";
+import img3 from "../../assets/imgs/contactImgs/smarphone.png";
+
 
 const ContactInfo = ({ className }) => {
     return (
@@ -16,8 +17,8 @@ const ContactInfo = ({ className }) => {
 	       						<img src={img1} alt={img1} />
 	       					</div>
 	       					<div className={classes.Description} >
-	       						<h4>Address</h4>
-	       						<span>228-5 Main Street, Georgia, USA</span>
+	       						<h4>Manzilimiz</h4>
+	       						<span>Farg'ona viloyati Marg'ilon shahar Xiyobon ko'chasi 65z uy</span>
 	       					</div>
 	       				</div>
 	       			</div>
@@ -27,7 +28,7 @@ const ContactInfo = ({ className }) => {
 	       						<img src={img2} alt={img2} />
 	       					</div>
 	       					<div className={classes.Description} >
-	       						<h4>Email Address</h4>
+	       						<h4>Email manzilimiz</h4>
 	       						<Link to="/">contact@educavo.com</Link>
 	       					</div>
 	       				</div>
@@ -38,8 +39,8 @@ const ContactInfo = ({ className }) => {
 	       						<img src={img3} alt={img3} />
 	       					</div>
 	       					<div className={classes.Description} >
-	       						<h4>Phone Number</h4>
-	       						<a href="tel:+998916707335">(+01)999-999-4444</a>
+	       						<h4>Tel Raqamimiz</h4>
+	       						<a href="tel:+998(73)2542404">+998 (73) 254-24-04</a>
 	       					</div>
 	       				</div>
 	       			</div>

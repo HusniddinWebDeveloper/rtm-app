@@ -9,11 +9,11 @@ const SelectCourses = () => {
     return (
         <>
         	<section className={classes.SelectCoursesSection} >
-        		<Title subtitle={"SELECT COURSE"} title={"Explore Popular Courses"} colorSubtitle={"#ff5421"} colorTitle={"#101010"} />
+        		<Title title={"Bizning Kurslarimiz"} colorTitle={"#18377D"} />
 
         		<div className="container">
 	    			<div className="row">
-                        {data.map((item) => {
+                        {data.map((item,index) => {
                             return <SelectCoursesItem 
                                         key={item.id}
                                         imgUrl={item.imgUrl} 
@@ -23,10 +23,11 @@ const SelectCourses = () => {
                                         raiting={item.raiting}
                                         students={item.students}
                                         lessons={item.lessons}
-                                        stars={item.stars}  />
+                                        stars={item.stars}
+                                        delay={index}  />
                         })}
 	    			</div>
-	    			<div className={classes.CoursesBtn} >
+	    			<div className={classes.CoursesBtn} data-aos="fade-up">
 	    				<a href="/">VIEW ALL Courses</a>
 	    			</div>
     			</div>

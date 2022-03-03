@@ -10,7 +10,7 @@ export default function CoursesData() {
             {
                id: Math.random(),
                imgUrl: img1,
-               linkText: "Computer Science Startup Varius et Commodo Working",
+               linkText: "Dasturlash",
                linkUrl: "/",
                price: "$40.00",
                stars: [true, true, true, true, false],

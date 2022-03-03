@@ -1,13 +1,10 @@
 import React from 'react';
 import classes from "./Title.module.css";
 
-const Component = ({ subtitle, title, colorSubtitle, colorTitle }) => {
+const Component = ({ title, colorTitle }) => {
     return (
-        <div className={classes.TitleWrapper}>
+        <div className={classes.TitleWrapper} data-aos="fade-right" data-aos-delay={0}>
         	<div className="container">
-	        	<div className={classes.Subtitle}>
-	        		<span style={{color: colorSubtitle}} >{subtitle}</span>
-	        	</div>
 	        	<div className={classes.Title}>
 	        		<h3 style={{color: colorTitle}} >{title}</h3>
 	        	</div>

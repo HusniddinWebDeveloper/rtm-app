@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import classes from "./CoursesSearch.module.css";
 import {BsFillGridFill} from "react-icons/bs";
 import {FaListUl, FaSearch} from "react-icons/fa";
@@ -11,6 +11,14 @@ const CoursesSearch = ({ className }) => {
     const gridTrue = useSelector((store) => store.data.grid);
     const dispatch = useDispatch();
     const [data] = useState(CoursesData);
+    const [filter, setFilter] = useState(data);
+    const inputRef = useRef(null);
+    const search = (e) => {
+        setFilter(data.filter((item) => {
+            return item.linkText.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
+            item.name.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g'));
+        }));
+    }
     return (
         <section className={classes.searchCourses} >
         	<div className="container" >
@@ -27,7 +35,7 @@ const CoursesSearch = ({ className }) => {
         							</span>
         						</div>
         						<div className={classes.ResInfo} >
-        							<span>Showing 1-9 of 49 results</span>
+        							<span>Showing {1}-{filter.length} of {data.length} results</span>
         						</div>
         					</div>
         				</div>
@@ -36,7 +44,7 @@ const CoursesSearch = ({ className }) => {
         				<div className={classes.searchForm} >
         					<form>
         						<div className={classes.searchInput} >
-        							<input type="search" name="search" placeholder="Search our courses" />
+        							<input type="search" onChange={search} ref={inputRef} name="search" placeholder="Search our courses" />
         						</div>
         						<div className={classes.searchBtn}>
         							<button type="submit">
@@ -49,7 +57,7 @@ const CoursesSearch = ({ className }) => {
         		</div>
                 <div className={classes.coursesGrid} >
                     <div className="row">
-                        {data.map((item) => {
+                        {filter.map((item,index) => {
                                 return <CousesItem 
                                             key={item.id}
                                             imgUrl={item.imgUrl} 
@@ -60,6 +68,7 @@ const CoursesSearch = ({ className }) => {
                                             name={item.name}
                                             people={item.people}
                                             stars={item.stars}
+                                            delay={index}
                                             />
                             })}
                     </div>

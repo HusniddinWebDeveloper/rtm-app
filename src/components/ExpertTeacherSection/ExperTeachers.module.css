@@ -10,6 +10,7 @@
 	background-color: rgb(249, 248, 248);
 	margin-bottom: 2rem;
 	transition: all .4s ease;
+	width: 100%;	
 }
 
 .imageWraper {
@@ -77,12 +78,12 @@
 }
 
 .teacherItem:hover {
-	background-color: #ff5421;
+	background-color: #00a85a;
 }
 
 .teacherItem:hover .itemContent{
 	transform: translateY(-30px);
-	background-color: #ff5421;
+	background-color: #00a85a;
 }
 
 .teacherItem:hover .itemContent h4,

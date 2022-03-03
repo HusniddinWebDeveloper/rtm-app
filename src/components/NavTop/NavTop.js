@@ -14,15 +14,15 @@ const NavTop = () => {
 	        			<div className={classes.ContentNavTop}>
 	        				<div className={classes.Left} >
 	        					<div className={classes.Gmail} >
-	        						<Link to="@gmail.com">
+	        						<Link to="https://www.facebook.com/rtm.margilan">
 	        							<span><HiOutlineMail /></span>
-	        							 support@rstheme.com
+	        							 www.facebook.com/rtm.margilan
 	        						</Link>
 	        					</div>
 	        					<div className={classes.location} >
 	        						<span>
 	        							<span><ImLocation2 /></span>
-	        							 374 William S Canning Blvd, MA 2721, USA
+	        							Farg'ona viloyati Marg'ilon shahar Xiyobon ko'chasi 65z uy
 	        						</span>
 	        					</div>
 	        				</div>
@@ -30,12 +30,12 @@ const NavTop = () => {
 	        					<div className={classes.LogIn} >
 	        						<Link to="/">
 	        							<span><BiLogIn /></span>
-	        							 Login / Register
+	        							 Kirish / Register
 	        						</Link>
 	        					</div>
 	        					<div className={classes.apply} >
 	        						<Link to="/">
-	        							apply now
+	        							Hoziroq bog'lanish
 	        						</Link>
 	        					</div>
 	        				</div>

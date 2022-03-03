@@ -1,18 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Layout from "./Layout";
 import {BrowserRouter} from "react-router-dom";
-import store from "../redux/store";
-import { Provider } from "react-redux";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+	useEffect(() => {
+		AOS.init();
+	});
 	return (
-		<BrowserRouter>
-			<Provider store={store}>
-					<div className="App">
-				      <Layout />
-				    </div>
-			</Provider>	
-		</BrowserRouter>
+			<BrowserRouter>
+				<div className="App">
+				    <Layout />
+				</div>
+			</BrowserRouter>
+			
   );
 }
 

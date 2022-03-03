@@ -5,7 +5,7 @@ import img from "../../assets/imgs/courses/img2.jpg";
 const Offer = () => {
     return (
         <section>
-        	<div className="container-fluid" >
+        	<div className="container-fluid" data-aos="fade-up">
         		<div className="row" >
         			<div className="col-md-6 col-sm-6 xs-dn" style={{padding: 0}}>
 	        			<div className={classes.OfferBanner} >

@@ -7,9 +7,10 @@
 	border-radius: 10px;
 	transition: all .3s ease; 
 	height: 264px;
-	width: 290px;
 	padding: 50px 10px 14px 10px;
 	text-align: center;
+	position: relative;
+	overflow: hidden;
 }
 
 .cartItem:hover {
@@ -26,7 +27,7 @@
 	display: block;
 }
 
-.TitleCart>span:first-child {
+.TitleCart>.block span {
 	font-family: nunito, sans-serif;
 	font-size: 38px;
 	font-weight: 700;
@@ -49,4 +50,33 @@
 		margin-bottom: 30px;
 		width: 100%;
 	}
+}
+
+
+.rightIlus {
+	position: absolute;
+	right: -10%;
+	bottom: -110%;
+	transition: all .6s ease;
+}
+
+.leftIlus {
+	position: absolute;
+	left: -10%;
+	bottom: -110%;
+	transition: all .6s ease;
+}
+
+.cartItem:hover > .rightIlus {
+	right: 0;
+	bottom: -10px;
+}
+
+.cartItem:hover > .leftIlus {
+	left: 0;
+	bottom: -10px;
+}
+
+.cartItem:hover {
+	box-shadow: 2px 4px 21px rgba(147, 147, 147, 0.25);
 }

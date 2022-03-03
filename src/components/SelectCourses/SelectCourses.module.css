@@ -13,13 +13,13 @@
 	padding: 10px 20px;
 	color: #fff;
 	text-transform: uppercase;
-	background-color: #FF5421;
+	background-color: #00a85a;
 	font-family: "rubik", sans-serif;
 	font-size: 14px;  
 	font-weight: 500;
 	border-radius: 5px;
 	transition: all .4s ease-in-out 0s;
-	border: 2px solid  #FF5421;
+	border: 2px solid  #00a85a;
 }
 
 .CoursesBtn > a:hover {

@@ -1,4 +1,4 @@
-import React, {useState,useLayoutEffect } from 'react'
+import React, {useState,useEffect } from 'react'
 import {Routes,Route, useLocation} from "react-router-dom";
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
@@ -12,13 +12,13 @@ function Layout() {
 	window.addEventListener("scroll", () => {
 		setScrollY(window.pageYOffset);
 	});
-   useLayoutEffect(() => {
+   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
   return (
     <Routes>
     	<Route path="/" element={<Home scrollY={scrollY} />} />
-    	<Route path="/About" element={<About scrollY={scrollY} />} />
+    	<Route path="/Haqimizda" element={<About scrollY={scrollY} />} />
       <Route path="/Courses" element={<Courses scrollY={scrollY} />} />
       <Route path="/Blog" element={<Blog scrollY={scrollY} />} />
       <Route path="/Contact" element={<Contact scrollY={scrollY} />} />

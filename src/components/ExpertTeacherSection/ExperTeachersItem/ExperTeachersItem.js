@@ -6,9 +6,9 @@ import {BsFacebook,BsTwitter} from "react-icons/bs";
 import {GrLinkedinOption} from "react-icons/gr";
 
 
-const ExpertTeacherItem = ({ imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin }) => {
+const ExpertTeacherItem = ({ imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin, delay }) => {
     return (
-        <div className="col-md-4 col-sm-6 col-xs-12">
+        <div data-aos="fade-up" data-aos-delay={delay * 50}>
 			<div className={classes.teacherItem} >
 				<div className={classes.imageWraper} >
 					<img src={imgUrl} alt={imgUrl} />

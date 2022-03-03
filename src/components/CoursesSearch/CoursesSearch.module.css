@@ -39,7 +39,7 @@
 
 .column.active,
 .rowGrid.active {
-	background-color: #ff5421;
+	background-color: #00a85a;
 }
 
 .column >span,
@@ -88,7 +88,7 @@
 	height: 100%;
 	width: 70px;
 	border: 0;
-	background-color: #ff5421;
+	background-color: #00a85a;
 	color: #fff;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
@@ -163,7 +163,7 @@
 .SelectCartPrice {
 	display: inline-block;
 	padding: 3px 15px;
-	background-color: rgb(255, 84, 33);
+	background-color: #00a85a;
 	font-family: "rubik", sans-serif;
 	font-size: 14px;
 	font-weight: 400;
@@ -225,7 +225,7 @@
 }
 
 .SelectCartTitle a:hover {
-	color: #ff5421;
+	color: #00a85a;
 }
 
 .SelectCartFooter {
@@ -274,7 +274,7 @@
 
 .SelectCartFooter > div > a:hover {
 	color: #fff;
-	background-color: #ff5421;
+	background-color: #00a85a;
 }
 
 .SelectCartFooter > div > a > span {

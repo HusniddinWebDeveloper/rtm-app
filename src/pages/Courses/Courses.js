@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 const Courses = ({ scrollY }) => {
     return (
         <>
-        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Courses"} link={"Home"} courses={true} />
+        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Kurslar"} link={"Asosiy"} courses={true} />
         	<CoursesSearch />
         	<Subscribe />
 	        <Footer />

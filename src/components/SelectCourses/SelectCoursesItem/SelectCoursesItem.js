@@ -9,10 +9,10 @@ import {FiChevronRight} from "react-icons/fi";
 
 
 
-const SelectCoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, students, lessons, news, date, stars }) => {
+const SelectCoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, students, lessons, news, date, stars, delay }) => {
     return (
         <>
-         <div className={news ? "" : "col-md-4 col-sm-6 col-xs-12"}>
+         <div className={news ? "" : "col-md-4 col-sm-6 col-xs-12"}  data-aos="fade-up" data-aos-delay={delay*50}>
          	<div className={news ? `${classes.SelectCoursesItem} ${classes.News}` : classes.SelectCoursesItem} >
          		<div className={classes.SelectCartImg} >
          			<a href={linkUrl}>
@@ -27,7 +27,7 @@ const SelectCoursesItem = ({ imgUrl, price, linkUrl, raiting, linkText, students
                          {
                              news ? 
                                  <>
-                                     <div className={classes.star}><BiCalendarCheck /></div>
+                                     <div className={classes.calendar}><BiCalendarCheck /></div>
                                      <div className={classes.starInfo} ><span>{date}</span></div>
                                  </> :
                                  <>

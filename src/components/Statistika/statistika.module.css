@@ -1,0 +1,89 @@
+.Statistika {
+	color: #18377D;
+	font-family: rubik, sans-serif;
+	font-weight: bold;
+	font-size: 38.2247px;
+	padding: 45px 0;
+}
+
+.Title {
+	margin-bottom: 40px;
+}
+
+.Title h2 {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 38.2247px;
+	line-height: 45px;
+	color: #18377D;
+}
+
+.Title h2 span {
+	margin-right: 10px;
+}
+
+.item {
+	height: 240px;
+	background-color: #F8FAFE;
+	border-radius: 14px;
+	border: 1px solid #F8FAFE;
+	padding-top: 20px;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: all .6s ease;
+}
+
+.item h4 {
+	margin: 11px 0 8px 0;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20.0298px;
+	line-height: 23px;
+	color: #18377D;
+}
+
+.item span {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 66.6207px;
+	line-height: 78px;
+	color: #000000;
+}
+
+.rightIlus {
+	position: absolute;
+	right: -10%;
+	bottom: -110%;
+	transition: all .6s ease;
+}
+
+.leftIlus {
+	position: absolute;
+	left: -10%;
+	bottom: -110%;
+	transition: all .6s ease;
+}
+
+.item:hover > .rightIlus {
+	right: 0;
+	bottom: -20px;
+}
+
+.item:hover > .leftIlus {
+	left: 0;
+	bottom: -20px;
+}
+
+.item:hover {
+	box-shadow: 2px 4px 21px rgba(147, 147, 147, 0.25);
+}
+
+
+.item {
+	margin-bottom: 2rem;
+}

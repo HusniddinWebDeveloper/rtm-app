@@ -1,6 +1,6 @@
 :root {
 	--default-color: #212529;
-	--active-color: #ff5421;
+	--active-color: #00a85a;
 	--fixed-color: #101010;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .Navbar ul li {
-	margin-left: 3rem;
+	margin-left: 2rem;
 	height: 100%;
 	line-height: 92px
 }
@@ -55,6 +55,7 @@
 
 .Navbar ul li a {
 	text-decoration: none;
+	word-wrap: nowrap;
 	color: #fff;
 	font-family: 'Rubik', sans-serif;
     font-size: 14px;
@@ -101,24 +102,16 @@
 	color: #fff;
 }
 
+.LogoLite,
 .LogoDark {
-	height: 100%;
-	line-height: 100px;
-}
-
-.LogoLite {
 	height: 100%;
 	line-height: 120px;
 }
 
-.LogoLite img.Lite {
-	width: 210px;
-	height: 35px;
-}
-
+.LogoLite img.Lite,
 .LogoDark img.Dark {
-	width: 150px;
-	height: 25px;
+	width: 110px;
+	height: 40px;
 }
 
 .Backdrop {

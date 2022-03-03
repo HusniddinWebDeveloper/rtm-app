@@ -4,11 +4,11 @@ import classes from "./PagesHeader.module.css";
 import NavTop from "../NavTop/NavTop";
 import Navbar from "../Navbar/Navbar";
 
-const PagesHeader = ({ bgUrl, title, link, scrollY, about, home, blog ,contact, courses }) => {
+const PagesHeader = ({ bgUrl, title, link, scrollY, haqimizda, home, blog ,contact, courses }) => {
     return (
         <section className={classes.PagesHeader} style={{backgroundImage: `url(${bgUrl}`}} >
         	<NavTop />
-        	<Navbar scrollY={scrollY} about={about} home={home} blog={blog} contact={contact} courses={courses} />
+        	<Navbar scrollY={scrollY} haqimizda={haqimizda} home={home} blog={blog} contact={contact} courses={courses} />
         	<div className="container">
         		<div className="row">
         			<div className="col-md-12 col-xs-12">

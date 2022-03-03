@@ -1,12 +1,13 @@
 import React from 'react';
 import classes from "./Footer.module.css";
-import LiteLogo from "../../assets/imgs/lite-logo.png";
+import LiteLogo from "../../assets/imgs/rtm-lite-logo.png";
 import {FaFacebookF ,FaTwitter, FaPinterestP, FaGooglePlusSquare, FaInstagram} from "react-icons/fa";
 import {ImLocation2} from "react-icons/im";
 import {FiPhoneCall} from "react-icons/fi";
 import {HiOutlineMail} from "react-icons/hi";
 import {BiCalendarCheck} from "react-icons/bi";
 import postsImg1 from "../../assets/imgs/posts1.jpg";
+import {Link} from "react-router-dom";
 
 const Footer = ({ className }) => {
     return (
@@ -23,33 +24,33 @@ const Footer = ({ className }) => {
         					</div>
         					<div className={classes.SocialMedia}>
         						<ul>
-        							<li><a href="/"><FaFacebookF /></a></li>
+        							<li><a href="https://www.facebook.com/rtm.margilan"><FaFacebookF /></a></li>
         							<li><a href="/"><FaTwitter /></a></li>
         							<li><a href="/"><FaPinterestP /></a></li>
         							<li><a href="/"><FaGooglePlusSquare /></a></li>
-        							<li><a href="/"><FaInstagram /></a></li>
+        							<li><a href="https://www.instagram.com/rtm.margilan"><FaInstagram /></a></li>
         						</ul>
         					</div>
         				</div>
         			</div>
         			<div className="col-md-3 col-xs-8">
         				<div className={classes.Address} >
-        					<h4 className={classes.FooterTitle} >Address</h4>
+        					<h4 className={classes.FooterTitle} >ALOQA UCHUN</h4>
         					<ul>
         						<li className={classes.AddresName} >
         							<span><ImLocation2 /></span>
-									<span>374 William S Canning Blvd, River MA 2721, USA</span>
+									<span>Farg'ona viloyati Marg'ilon shahar Xiyobon ko'chasi 65z uy</span>
         						</li>
         						<li>
-        							<a href="tel: (+880)155-69569">
+        							<a href="tel: +998(73)2542404">
         								<span><FiPhoneCall /></span>
-        								<span>(+880)155-69569</span>
+        								<span>+998 (73) 254-24-04</span>
         							</a>
         						</li>
         						<li>
-        							<a href="/">
+        							<a href="https://www.facebook.com/rtm.margilan">
         								<span><HiOutlineMail /></span>
-        								<span>support@rstheme.com</span>
+        								<span>www.facebook.com/rtm.margilan</span>
         							</a>
         						</li>
         					</ul>
@@ -57,44 +58,44 @@ const Footer = ({ className }) => {
         			</div>
         			<div className="col-md-3 col-xs-8">
         				<div className={`${classes.Address} ${classes.Courses}`}>
-        					<h4 className={classes.FooterTitle} >Courses</h4>
+        					<h4 className={classes.FooterTitle} >Kurslar</h4>
         					<ul>
         						<li>
-        							<a href="/">
+        							<Link to="/">
         								<span></span>
-        								<span>Courses</span>
-        							</a>
+        								<span>Xizmatlar</span>
+        							</Link>
         						</li>
         						<li>
-        							<a href="/">
+        							<Link to="/Courses">
         								<span></span>
-        								<span>Course Two</span>
-        							</a>
+        								<span>Kurslar</span>
+        							</Link>
         						</li>
         						<li>
-        							<a href="/">
+        							<Link to="/">
         								<span></span>
-        								<span>Single Course</span>
-        							</a>
+        								<span>Hodimlar</span>
+        							</Link>
         						</li>
         						<li>
-        							<a href="/">
+        							<Link to="/Haqimizda">
         								<span></span>
-        								<span>Profile</span>
-        							</a>
+        								<span>Biz haqimizda</span>
+        							</Link>
         						</li>
         						<li>
-        							<a href="/">
+        							<Link to="/Contact">
         								<span></span>
-        								<span>Login/Register</span>
-        							</a>
+        								<span>Bog'lanish</span>
+        							</Link>
         						</li>
         					</ul>
         				</div>
         			</div>
         			<div className="col-md-3 col-xs-10">
         				<div className={classes.Posts}>
-        					<h4 className={classes.FooterTitle} >Recent Posts</h4>
+        					<h4 className={classes.FooterTitle} >Postlar</h4>
         					<div className={classes.psotsWrapper}>
         						<div className={classes.postsItem}>
         							<div className={classes.imgPosts}>
@@ -126,15 +127,8 @@ const Footer = ({ className }) => {
         		</div>
         		<div className={classes.FooterBottom}>
         			<div className="row">
-	        			<div className="col-md-6 col-xs-12">
-	        				<span className={classes.CopyRight}>©copyright 2022 Educavo. Designed By <a href="/">RSTheme</a></span>
-	        			</div>
-	        			<div className="col-md-6 col-xs-12" >
-	        				<ul className={classes.FooterNav} >
-	        					<li><a href="/">Events</a></li>
-	        					<li><a href="/">Blog</a></li>
-	        					<li><a href="/">Contact Us</a></li>
-	        				</ul>
+	        			<div className="col-md-12 col-xs-12">
+	        				<span className={classes.CopyRight}>Copyright 2021. © Raqamli texnologiyalar markazi.</span>
 	        			</div>
 	        		</div>
         		</div>

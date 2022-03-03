@@ -9,7 +9,7 @@ import Footer from "../../components/Footer/Footer";
 const Contact = ({ scrollY }) => {
     return (
         <>
-        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Contact"} link={"Home"} contact={true} />
+        	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Bog'lanish"} link={"Asosiy"} contact={true} />
         	<ContactInfo />
         	<ContactForm />
         	<Subscribe />

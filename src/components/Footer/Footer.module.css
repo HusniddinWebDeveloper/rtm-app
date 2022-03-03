@@ -8,8 +8,8 @@
 }
 
 .imgConten img {
-	width: 210px;
-	height: 35px;
+	width: 100px;
+	height: 45px;
 }
 
 .Description p {
@@ -42,7 +42,7 @@
 }
 
 .SocialMedia ul li a:hover {
-	color: #FF5421;
+	color: #00a85a;
 	transform: scale(.9);
 }
 
@@ -53,6 +53,11 @@ h4.FooterTitle {
 	font-weight: 700;
 	color: #fff;
 	position: relative;
+	text-transform: lowercase;
+}
+
+h4.FooterTitle:first-letter {
+	text-transform: uppercase;
 }
 
 h4.FooterTitle::after {
@@ -62,7 +67,7 @@ h4.FooterTitle::after {
 	bottom: -10px;
 	width: 40px;
 	height: 3px;
-	background-color: rgb(255, 84, 33);
+	background-color: #00a85a;
 }
 
 .Address ul {
@@ -102,7 +107,7 @@ h4.FooterTitle::after {
 .FooterNav li a:hover,
 .CopyRight > a:hover,
 .Address ul li a:hover span {
-	color: rgb(255, 84, 33);
+	color: #00a85a;
 }
 
 .AddresName span:last-child,
@@ -119,7 +124,7 @@ h4.FooterTitle::after {
 	display: block;
 	height: 6px;
 	width: 6px;
-	background-color:rgb(255, 84, 33);
+	background-color: #00a85a;
 }
 
 .postsItem {
@@ -151,7 +156,7 @@ h4.FooterTitle::after {
 }
 
 .postsTitle a:hover {
-	color: rgb(255, 84, 33);
+	color: #00a85a;
 
 }
 
@@ -164,7 +169,7 @@ h4.FooterTitle::after {
 
 .DatePosts span:first-child {
 	margin-right: 10px;
-	color: rgb(255, 84, 33);
+	color: #00a85a;
 	margin-top: 3px;
 }
 
@@ -178,30 +183,11 @@ h4.FooterTitle::after {
 .FooterBottom {
 	border-top: 1px solid #c3c3c3;
 	padding: 2rem 0 0 0;
+	text-align: center;
 }
 
 .CopyRight {
 	color: #Fff;
-}
-
-.FooterNav {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	flex-flow: row nowrap
-}
-
-.FooterNav li:first-child {
-	list-style: none;
-}
-
-.FooterNav li {
-	margin-left: 1.6rem;
-	color: rgb(255, 84, 33);
-}
-
-.FooterNav  li a {
-	color: #fff;
 }
 
 

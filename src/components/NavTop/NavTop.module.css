@@ -41,7 +41,7 @@
 
 .Right .LogIn a:hover,
 .Gmail a:hover {
-	color: #FF5421;
+	color: #00a85a;
 }
 
 .Right .LogIn a,
@@ -75,13 +75,9 @@
 	display: inline-block;
 	line-height: 50px;
 	height: 100%;
-	background-color: #FF5421;
+	background-color: #00a85a;
 	text-transform: uppercase;
 	padding: 0 35px;
-}
-
-.apply >a:hover {
-	background-color: rgb(255, 84, 33);
 }
 
 @media (max-width: 48em) {

@@ -37,10 +37,17 @@
 
 .Description a,
 .Description span {
+	display: inline-block;
 	color: rgb(23, 31, 50);
 	font-family: nunito, sans-serif;
 	font-size: 17px;
 	font-weight: 600;
+	transition: all .4s ease;
+	text-align: center;
+}
+
+.Description a:hover {
+	color: #00a85a;
 }
 
 @media (max-width: 64em ) {

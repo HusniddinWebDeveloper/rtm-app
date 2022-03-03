@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useRef} from 'react';
 import classes from "./BlogSection.module.css";
 import BlogItem from "./BlogItem/BlogItem";
 import BlogData from "./BlogData";
@@ -9,13 +9,24 @@ import {FaSearch} from "react-icons/fa";
 
 const BlogSection = () => {
 	const [data] = useState(BlogData);
+    const [filter, setFilter] = useState(data);
+    const inputRef = useRef(null);
+    const search = () => {
+        setFilter(data.filter((item) => {
+            return item.linkTitle.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
+            item.date.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
+            item.univer.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
+            item.parag.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
+            item.admin.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g'));
+        }));
+    }
     return (
         <section className={classes.BlogSection} >
         	<div className="container">
         		<div className="row">
         			<div className="col-md-8 col-xs-12">
         				<div className={classes.articleBlog} >
-        					{data.map(({id,imgurl, linkTitle, date, admin, univer, parag}) => {
+        					{filter.map(({id,imgurl, linkTitle, date, admin, univer, parag}) => {
         					 return	<BlogItem imgurl={imgurl} linkTitle={linkTitle} date={date} admin={admin} univer={univer} parag={parag} key={id}  />
         					})}
         				</div>
@@ -24,7 +35,7 @@ const BlogSection = () => {
         				<div className={classes.searchAside} >
         					<div className={classes.searchForm}>
     							<form>
-    								<input type="search" name="search" placeholder="Searching..." />
+    								<input ref={inputRef} onChange={search} type="search" name="search" placeholder="Searching..." />
     								<button type="submit"><FaSearch /></button>
     							</form>
         					</div>

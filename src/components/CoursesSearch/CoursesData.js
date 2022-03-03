@@ -27,7 +27,7 @@ export default function CoursesData() {
                stars: [false, false, false, false, false],
                raiting: "(0)",
                people: "25",
-               name: "Gym",
+               name: "Smm",
             },
             {
                id: Math.random(),
@@ -38,7 +38,7 @@ export default function CoursesData() {
                stars: [true, true, true, false, false],
                raiting: "(0)",
                people: "25",
-               name: "Gym",
+               name: "Frontend",
             },
             {
                id: Math.random(),
@@ -71,7 +71,7 @@ export default function CoursesData() {
                stars: [true, true, true, true, true],
                raiting: "(0)",
                people: "4",
-               name: "Gym",
+               name: "Frontend",
             },
          ];
 }
