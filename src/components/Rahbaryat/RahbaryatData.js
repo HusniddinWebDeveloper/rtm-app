@@ -2,8 +2,6 @@ import img1 from "../../assets/imgs/TeacherImgs/teacher_1.jpg";
 import img2 from "../../assets/imgs/TeacherImgs/teacher_2.jpg";
 import img3 from "../../assets/imgs/TeacherImgs/teacher_3.jpg";
 import img4 from "../../assets/imgs/TeacherImgs/teacher_4.jpg";
-import img5 from "../../assets/imgs/TeacherImgs/teacher_5.jpg";
-import img6 from "../../assets/imgs/TeacherImgs/teacher_6.jpg";
 
 export default function CoursesData() {
     return [

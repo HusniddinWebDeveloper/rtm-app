@@ -12,7 +12,7 @@ export const useFetch = (url) => {
         	fetch(url)
 	        	.then(res => res.json())
 	        	.then(data => {
-	        		setState({data: data, loaded: !initialstate.loaded});
+	        		setState({data: data, loaded: false});
 	        	})
 	        	.catch(() => console.log("xatolik bor"))
 	        },[]);

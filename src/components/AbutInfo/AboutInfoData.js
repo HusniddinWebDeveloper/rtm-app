@@ -1,5 +1,3 @@
-import img1 from "../../assets/imgs/about-imgs/3-5.png";
-import img2 from "../../assets/imgs/about-imgs/4-2.png";
 import img3 from "../../assets/imgs/about-imgs/2-7.png";
 import img4 from "../../assets/imgs/about-imgs/1-6.png";
 

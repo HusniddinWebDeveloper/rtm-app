@@ -4,7 +4,7 @@ import { YMaps, Map, Placemark,FullscreenControl } from 'react-yandex-maps';
 import {useFetch} from "../useFetch/useFetch";
 
 const ContactForm = ({ className }) => {
-    const {data, loaded} = useFetch("https://ilyosbek.uz/rtm/api/course/getall");
+    const {data, loaded} = useFetch("https://jsonplaceholder.typicode.com/posts");
     const submitHandler = (e) => {
         e.preventDefault();
         fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -17,8 +17,6 @@ const ContactForm = ({ className }) => {
             headers: {
           'Content-Type': 'application/json'
         }})
-        .then(res => res.json())
-        .then(data => console.log(data));
     }
     return (
         <section className={classes.ContactForm} >
