@@ -1,55 +1,34 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Title from "../Title/Title";
+import { ImUserTie } from "react-icons/im"
 import RahbaryatItem from "../ExpertTeacherSection/ExperTeachersItem/ExperTeachersItem";
-import Rahbaryat from "./RahbaryatData";
-import OwlCarousel from 'react-owl-carousel2';
 import '../owlCarouselCss/owlCarousel.css';
+import { useFetch } from "../useFetch/useFetch";
 
 
 
 const Rahbariyat = ({ className }) => {
-	const [data] = useState(Rahbaryat);
-	const options = {
-	    nav: false,
-	    rewind: true,
-	    autoplay: false,
-	    loop: true,
-	    dots: true,
-	    margin: 20,
-	    dotsEach: true,
-	    responsive:{
-                    0:{
-                        items:1,
-                    },
-                    600:{
-                        items:1,
-                    },
-                    1000:{
-                        items:3,
-                    }
-                }
-	   };
-
+    const { data } = useFetch("https://ilyosbek.uz/rtm/api/leader/getall");
     return (
         <section style={{paddingBottom: "2rem",}}>
-        	<Title title={"Rahbaryat"} colorTitle={"#18377D"} />
+            <Title icon={<ImUserTie />} title={"Rahbaryat"} colorTitle={"#00a85a"} />
         	<div className="container">
         		<div className="row">
-        			<OwlCarousel options={options} >
-        				{data.map(({id,imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin},index) => {
-			        		return  <RahbaryatItem 	
-                                                    key={id}
-                                                    imgUrl={imgUrl}
-                                                    name={name}
-                                                    proff={proff}
-                                                    ggurl={ggurl}
-                                                    TwUrl={TwUrl}
-                                                    fsbook={fsbook}
-                                                    linkedin={linkedin}
-                                                    delay={index}
-                                                    />
-			        	})}
-        			</OwlCarousel>
+        				{data.length ?  data.map(({id,firstName,lastName,position, image},index) => {
+                            return <div className="col-md-4 col-xs-12" key={id}>
+                                        <RahbaryatItem
+                                            imgUrl={image}
+                                            name={firstName}
+                                            lname={lastName}
+                                            proff={position}
+                                            ggurl={"/"}
+                                            TwUrl={"/"}
+                                            fsbook={"/"}
+                                            linkedin={"/"}
+                                            delay={index}
+                                        />
+                                    </div>    
+			        	}) : ""}
         		</div>
         	</div>
         </section>

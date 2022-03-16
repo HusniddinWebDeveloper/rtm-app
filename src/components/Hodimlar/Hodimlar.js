@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Title from "../Title/Title";
 import RahbaryatItem from "../ExpertTeacherSection/ExperTeachersItem/ExperTeachersItem";
-import Rahbaryat from "./HdoimlarData";
 import OwlCarousel from 'react-owl-carousel2';
 import '../owlCarouselCss/owlCarousel.css';
-import { IoIosPeople } from "react-icons/io"
-
-
+import { IoIosPeople } from "react-icons/io";
+import { useFetch } from "../useFetch/useFetch";
+import Preloader from "../Preloader/Preloader";
 
 const Hodimlar = ({ className }) => {
-	const [data] = useState(Rahbaryat);
+	const { data, loaded } = useFetch("https://ilyosbek.uz/rtm/api/staff/get/random");
 	const options = {
 	    nav: false,
 	    rewind: true,
@@ -33,23 +32,25 @@ const Hodimlar = ({ className }) => {
 
     return (
         <section style={{paddingBottom: "2rem",}}>
-        	<Title icon={<IoIosPeople />} title={"Hodimlar"} colorTitle={"#18377D"} />
+            <Title icon={<IoIosPeople />} title={"Hodimlar"} colorTitle={"#00a85a"} />
         	<div className="container">
+                {loaded ? <Preloader /> : ""}
                 <div className="row">
         			<OwlCarousel options={options} >
-        				{data.map(({id,imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin},index) => {
-			        		return  <RahbaryatItem 	
-                                                    key={id}
-                                                    imgUrl={imgUrl}
-                                                    name={name}
-                                                    proff={proff}
-                                                    ggurl={ggurl}
-                                                    TwUrl={TwUrl}
-                                                    fsbook={fsbook}
-                                                    linkedin={linkedin}
-                                                    delay={index}
-                                                    />
-			        	})}
+                        {data.length ? 
+                            data.map(({ id, firstName, lastName, position, image, }, index) => {
+                                return <RahbaryatItem
+                                        imgUrl={image}
+                                        key={id}
+                                        name={firstName}
+                                        lname={lastName}
+                                        proff={position}
+                                        username={data.social}    
+                                        delay={index}
+                                    />
+                        }) : 
+                        ""
+                    }
         			</OwlCarousel>
                 </div>
         	</div>

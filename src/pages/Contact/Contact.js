@@ -1,5 +1,5 @@
 import React from 'react';
-import bgUrl from "../../assets/imgs/PagesHeader/bgcontact.jpg";
+import bgUrl from "../../assets/imgs/slider-imgs/slide-5.jpg";
 import PagesHeader from "../../components/PagesHeader/PagesHeader";
 import ContactInfo from "../../components/ContactInfo/ContactInfo";
 import ContactForm from "../../components/ContactForm/ContactForm";

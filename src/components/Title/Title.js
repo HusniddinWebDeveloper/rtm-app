@@ -6,7 +6,7 @@ const Component = ({ title, colorTitle, icon }) => {
         <div className={classes.TitleWrapper} data-aos="fade-right" data-aos-delay={0}>
         	<div className="container">
 	        	<div className={classes.Title}>
-					{icon}
+					{icon ? <span>{icon}</span> : ""}
 	        		<h3 style={{color: colorTitle}} >{title}</h3>
 	        	</div>
 	        </div>

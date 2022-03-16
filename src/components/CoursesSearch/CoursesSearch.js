@@ -1,25 +1,30 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classes from "./CoursesSearch.module.css";
 import {BsFillGridFill} from "react-icons/bs";
 import {FaListUl, FaSearch} from "react-icons/fa";
 import CousesItem from "./CoursesItem/CoursesItem";
-import CoursesData from "./CoursesData";
 import {useSelector, useDispatch} from "react-redux";
 import {gridChange} from "../../redux/actions/action";
+import { useFetch } from "../useFetch/useFetch";
+import Preloader from "../Preloader/Preloader";
 
 const CoursesSearch = ({ className }) => {
+    const { data, loaded } = useFetch("https://ilyosbek.uz/rtm/api/course/getall");
     const gridTrue = useSelector((store) => store.data.grid);
     const dispatch = useDispatch();
-    const [data] = useState(CoursesData);
     const [filter, setFilter] = useState(data);
+    useEffect(() => {
+        setFilter(data);
+    }, [loaded]);
     const inputRef = useRef(null);
     const search = (e) => {
 		e.preventDefault();
         setFilter(data.filter((item) => {
-            return item.linkText.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
+            return item.description.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g')) ||
             item.name.toLowerCase().match(new RegExp(inputRef.current.value.toLowerCase(), 'g'));
         }));
     }
+    console.log(data)
     return (
         <section className={classes.searchCourses} >
         	<div className="container" >
@@ -58,21 +63,22 @@ const CoursesSearch = ({ className }) => {
         		</div>
                 <div className={classes.coursesGrid} >
                     <div className="row">
-						{filter.length > 0 ? filter.map((item,index) => {
-                                return <CousesItem 
-                                            key={item.id}
-                                            imgUrl={item.imgUrl} 
-                                            linkText={item.linkText} 
-                                            linkUrl={item.linkUrl}
-                                            price={item.price}
-                                            raiting={item.raiting}
-                                            name={item.name}
-                                            people={item.people}
-                                            stars={item.stars}
-                                            delay={index}
-                                            />
-                            }) : 
-							<span>Kurslar topilmadi</span>
+                        {!loaded ? 
+                            (filter.length ? 
+                                filter.map((item, index) => {
+                                                        return <CousesItem 
+                                                                    key={item.id}
+                                                                    id={item.id}
+                                                                    image={item.image} 
+                                                                    duration={item.duration} 
+                                                                    description={item.description}
+                                                                    price={item.price}
+                                                                    name={item.name}
+                                                                    delay={index}
+                                                                    />
+                                                    }) :
+                                 <div className="col-md-12"><span>Kurslar topilmadi</span></div>) : 
+							<Preloader />
 							}
                         {}
                     </div>

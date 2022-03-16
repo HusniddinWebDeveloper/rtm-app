@@ -12,7 +12,7 @@ const AboutVideo = () => {
         <section className={classes.AboutVideo}>
         	<div className="container">
         		<div className="row">
-        			<div className="col-md-12 col-xs-12">
+                    <div className="col-md-12 col-xs-12" data-aos="fade-up" data-aos-delay="0">
         				<div className={classes.videoContent}>
         					<div className={classes.playingContent}>
         						<span>

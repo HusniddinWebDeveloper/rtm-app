@@ -110,6 +110,7 @@
 	box-shadow: 0 0 8px 2px rgba(0,0,0,0.1);
 	transition: all .8s ease;
 	padding: 1.8rem;
+	height: 580px;
 }
 
 .SelectCoursesItem.active {
@@ -174,6 +175,11 @@
 .SelectCartDescription {
 	padding: 35px 0 0 0;
 	flex-basis: 50%;
+	height: 300px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
 }
 
 .NameItem {
@@ -183,22 +189,6 @@
 	font-size: 14px;
 	color: rgb(51,51,51);
 	font-weight: 500;
-}
-
-.SelectCartRaiting {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	flex-flow: row nowrap;
-}
-
-.star {
-	margin-right: 5px;
-	color: #ccc;
-}
-
-.star.active {
-	color: rgb(255, 84, 33);
 }
 
 .starInfo span {
@@ -213,7 +203,7 @@
 	margin-bottom: 10px;
 }
 
-.SelectCartTitle a {
+.SelectCartTitle p {
 	font-family: "nunito", sans-serif;
 	font-size: 22px;
 	letter-spacing: -1px;
@@ -224,16 +214,13 @@
 	transition: all .4s ease;
 }
 
-.SelectCartTitle a:hover {
-	color: #00a85a;
-}
-
 .SelectCartFooter {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 25px;
+	/*padding-top: 25px;*/
+	width: 100%;
 }
 
 .SelectCartFooter > div{
@@ -252,7 +239,7 @@
 
 .SelectCartFooter > div > span:first-child {
 	display: inline-block;
-	color: #161616;
+	color: #00a85a;
 	margin-top: 3px;
 	margin-right: 5px;
 	font-size: 14px ;
@@ -286,19 +273,22 @@
 @media (max-width: 48em) {
 	.SelectCoursesItem.active .SelectCartImg  {
 		width: 100%;
+		flex-basis: 40%;
 		height: 95px;
 		object-fit: cover;
 	}
 
 	.SelectCoursesItem.active .SelectCartImg { 
-		flex-basis: 60%;
+		flex-basis: 40%;
 	}
 
 	.SelectCoursesItem.active .SelectCartDescription {
 		padding-left: 10px;
+		flex-basis: 60%;
 	}
 
 	.SelectCoursesItem {
-		padding: 10px;
+		padding: 20px;
+		height: auto;
 	}
 }

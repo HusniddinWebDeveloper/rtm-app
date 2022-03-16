@@ -1,10 +1,8 @@
 import React from 'react';
 import PagesHeader from "../../components/PagesHeader/PagesHeader";
-import bgUrl from "../../assets/imgs/PagesHeader/inner01.jpg";
-import AboutInfo from "../../components/AbutInfo/AboutInfo";
+import bgUrl from "../../assets/imgs/slider-imgs/slide-4.jpg";
+import Statistika from "../../components/Statistika/Statistika";
 import AboutVideoSection  from "../../components/AboutVideoSection/AboutVideo";
-import StudentsSaying from "../../components/StudentsSaying/StudentsSaying";
-import AboutNews from "../../components/AboutNews/AboutNews";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import Footer from "../../components/Footer/Footer";
 
@@ -12,10 +10,8 @@ const About = ({ scrollY }) => {
     return (
         <>
         	<PagesHeader scrollY={scrollY} bgUrl={bgUrl} title={"Haqida"} link={"Asosiy"} haqimizda={true} />
-        	<AboutInfo />
+            <Statistika />
         	<AboutVideoSection />
-            <StudentsSaying />
-            <AboutNews />
         	<Subscribe />
 	        <Footer />
         </>

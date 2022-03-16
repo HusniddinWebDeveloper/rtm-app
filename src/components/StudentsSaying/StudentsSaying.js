@@ -32,8 +32,8 @@ const StudentsSaying = ({ className }) => {
     return (
         <section className={classes.StudentsSection}>
         	<Title title={"What Our Students Says"} colorTitle={"#18377D"} />
-        	<div className="container">
-        		<div className="row">
+            <div className="container">
+                <div className="row" data-aos="fade-up" data-aos-delay="0">
         			<div className="col-md-12 col-xs-12 center-xs">
 	        			<div className={classes.StudentsSaying}>
 	        				<OwlCarousel options={options} >

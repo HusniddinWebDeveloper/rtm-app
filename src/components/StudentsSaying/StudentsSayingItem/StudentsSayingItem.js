@@ -4,7 +4,7 @@ import {BsFillStarFill} from "react-icons/bs";
 
 const StudentsItem = ({ imgUrl, parag, name, prof }) => {
     return (
-        <div className={classes.StudenstCarouselIten} >
+        <div className={classes.StudenstCarouselIten}>
 			<div className={classes.imgContent} >
 				<img src={imgUrl} alt={imgUrl} />
 			</div>

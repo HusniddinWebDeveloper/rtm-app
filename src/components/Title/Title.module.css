@@ -35,6 +35,22 @@
     text-transform: uppercase;
 }
 
+.Title > span  {
+    font-size: 40px;
+    color: #00a85a;
+    margin-right: 10px;
+}
+
+.Title > span > svg {
+    transform: translateY(5px);
+}
+
+
+.Title > span > img {
+    height: 40px;
+    object-fit: cover;
+}
+
 @media (max-width: 560px) {
     .Subtitle span {
         font-size: 14px;

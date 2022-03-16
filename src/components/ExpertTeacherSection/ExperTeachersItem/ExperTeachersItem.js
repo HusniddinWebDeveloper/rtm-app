@@ -1,12 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import classes from "../ExperTeachers.module.css";
-import {AiOutlineGooglePlus} from "react-icons/ai";
-import {BsFacebook,BsTwitter} from "react-icons/bs";
-import {GrLinkedinOption} from "react-icons/gr";
+import { FaTelegramPlane } from "react-icons/fa";
 
 
-const ExpertTeacherItem = ({ imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin, delay }) => {
+const ExpertTeacherItem = ({ imgUrl, name, proff, username, delay, lname }) => {
     return (
         <div data-aos="fade-up" data-aos-delay={delay * 50}>
 			<div className={classes.teacherItem} >
@@ -14,30 +12,19 @@ const ExpertTeacherItem = ({ imgUrl,name,proff,ggurl,TwUrl,fsbook,linkedin, dela
 					<img src={imgUrl} alt={imgUrl} />
 				</div>
 				<div className={classes.itemContent} >
-					<h4>{name}</h4>
+					<h4>{name} {lname}</h4>
 					<span>{proff}</span>
-					<ul className={classes.socialIcons}>
-						<li>
-							<Link to={fsbook}>
-								<BsFacebook />
-							</Link>
-						</li>
-						<li>
-							<Link to={ggurl}>
-								<AiOutlineGooglePlus />
-							</Link>
-						</li>
-						<li>
-							<Link to={TwUrl}>
-								<BsTwitter />
-							</Link>
-						</li>
-						<li>
-							<Link to={linkedin}>
-								<GrLinkedinOption />
-							</Link>
-						</li>
-					</ul>
+					{username ? 
+						<ul className={classes.socialIcons}>
+							<li>
+								<Link to={username}>
+									<FaTelegramPlane />
+									<span>
+										{username}
+									</span>
+								</Link>
+							</li>
+						</ul> : ""}
 				</div>
 			</div>
 		</div>

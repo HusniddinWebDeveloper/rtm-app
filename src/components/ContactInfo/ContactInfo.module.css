@@ -13,6 +13,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-flow: column nowrap;
+	transition: all .4s ease;
 }
 
 .imgContent {
@@ -48,6 +49,11 @@
 
 .Description a:hover {
 	color: #00a85a;
+}
+
+.contactCart:hover {
+	box-shadow: 0px 0px 21px 0px rgba(147, 147, 147, 0.25);
+	transform: scale(1.01);
 }
 
 @media (max-width: 64em ) {

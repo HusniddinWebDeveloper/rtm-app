@@ -14,7 +14,7 @@
     "react-countup": "^6.1.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-marquee-slider": "^1.1.5",
+    "react-input-mask": "^2.0.4",
     "react-owl-carousel2": "^0.3.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
@@ -22,7 +22,6 @@
     "react-yandex-maps": "^4.6.0",
     "redux": "^4.1.2",
     "styled-components": "^5.3.3",
-    "swiper": "^8.0.6",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

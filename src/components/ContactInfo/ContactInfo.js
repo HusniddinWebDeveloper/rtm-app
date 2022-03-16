@@ -11,7 +11,7 @@ const ContactInfo = ({ className }) => {
        <section className={classes.contactInfo} >
 	       	<div className="container">
 	       		<div className="row">
-	       			<div className="col-md-4 col-sm-6 col-xs-12">
+					<div className="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up" data-aos-delay={0}>
 	       				<div className={classes.contactCart} >
 	       					<div className={classes.imgContent} >
 	       						<img src={img1} alt={img1} />
@@ -22,7 +22,7 @@ const ContactInfo = ({ className }) => {
 	       					</div>
 	       				</div>
 	       			</div>
-	       			<div className="col-md-4 col-sm-6 col-xs-12">
+					<div className="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up" data-aos-delay={100}>
 	       				<div className={classes.contactCart} >
 	       					<div className={classes.imgContent} >
 	       						<img src={img2} alt={img2} />
@@ -33,7 +33,7 @@ const ContactInfo = ({ className }) => {
 	       					</div>
 	       				</div>
 	       			</div>
-	       			<div className="col-md-4 col-sm-6 col-xs-12">
+					<div className="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up" data-aos-delay={200}>
 	       				<div className={classes.contactCart} >
 	       					<div className={classes.imgContent} >
 	       						<img src={img3} alt={img3} />

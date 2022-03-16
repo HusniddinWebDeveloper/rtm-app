@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./Offer.module.css";
-import img from "../../assets/imgs/courses/img2.jpg";
+import img from "../../assets/imgs/slider-imgs/slide-2.jpg";
 
 const Offer = () => {
     return (

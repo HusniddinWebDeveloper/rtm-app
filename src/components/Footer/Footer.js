@@ -61,7 +61,7 @@ const Footer = ({ className }) => {
         					<h4 className={classes.FooterTitle} >Kurslar</h4>
         					<ul>
         						<li>
-        							<Link to="/">
+                                    <Link to="/Xizmatlar">
         								<span></span>
         								<span>Xizmatlar</span>
         							</Link>
@@ -70,12 +70,6 @@ const Footer = ({ className }) => {
         							<Link to="/Courses">
         								<span></span>
         								<span>Kurslar</span>
-        							</Link>
-        						</li>
-        						<li>
-        							<Link to="/">
-        								<span></span>
-        								<span>Hodimlar</span>
         							</Link>
         						</li>
         						<li>

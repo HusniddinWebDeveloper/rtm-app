@@ -7,17 +7,16 @@ import SelectCourses from "../../components/SelectCourses/SelectCourses";
 import Rahbaryat from "../../components/Rahbaryat/Rahbaryat";
 import Hodimlar from "../../components/Hodimlar/Hodimlar";
 import Offer from "../../components/Offer/Offer";
-
 import Subscribe from "../../components/Subscribe/Subscribe";
 import Footer from "../../components/Footer/Footer";
 
-const Component = ({scrollY}) => {
+const Component = ({ scrollY }) => {
     return (
-        <>
-	        <Navbar scrollY={scrollY} fixed={true} home={true} />
-	        <Banner />
+        <>	
+        	<Navbar scrollY={scrollY} home={true} Hpage={true}/>
+	        <Banner scrollY={scrollY} />
 	        <Statistika />
-	        <Xizmatlar />
+	        <Xizmatlar url={"https://ilyosbek.uz/rtm/api/service/get/random"} />
 	        <SelectCourses />
 	        <Rahbaryat />
 	        <Hodimlar />

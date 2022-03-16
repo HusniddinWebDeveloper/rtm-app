@@ -8,15 +8,21 @@ import {RiCloseCircleFill} from "react-icons/ri";
 import {useSelector, useDispatch} from "react-redux";
 import {openMenu} from "../../redux/actions/action";
 
-function Navbar({scrollY, fixed, home, haqimizda, courses, blog, contact}) {
+function Navbar({ scrollY, home, haqimizda, courses, xizmatlar, contact, hodimlar, Hpage }) {
     const data = useSelector((store) => store.data.menuMedia);
     const dispatch = useDispatch();
   return (
-    <nav className={scrollY > 92 ? `${classes.FixedNavbar} ${classes.Active}`: (fixed ? `${classes.FixedNavbar} ${classes.Default}` : classes.FixedNavbar)} >
+      <nav className={scrollY ? `${classes.FixedNavbar} ${classes.Active}` : (Hpage ? `${classes.FixedNavbar} ${classes.Default}` : classes.FixedNavbar)} >
     	<div className="container">
     		<div className="row">
     			<div className="col-md-2 col-xs-9">
-    				<div className={scrollY > 92 ? classes.LogoDark : classes.LogoLite} ><img className={scrollY > 92 ? classes.Dark : classes.Lite} src={scrollY > 92 ? DarkLogo : LiteLogo} alt="logo" /></div>
+    				<div className={scrollY ? classes.LogoDark : classes.LogoLite} >
+                        <Link to="/">
+                            <img 
+                                className={scrollY ? classes.Dark : classes.Lite} 
+                                src={scrollY ? DarkLogo : (Hpage ? DarkLogo : LiteLogo)} alt="logo" />
+                          </Link>
+                    </div>
     			</div>
     			<div className="col-md-10 col-xs-3">
     				<div className={classes.Navbar}>
@@ -27,18 +33,13 @@ function Navbar({scrollY, fixed, home, haqimizda, courses, blog, contact}) {
                                 </Link>
                             </li>
     						<li onClick={() => dispatch(openMenu(false))}>
-                                 <Link to="/" className={false ? classes.Active : ""}>
-                                    Xizmatlar
+                                  <Link to="/Xizmatlar" className={xizmatlar ? classes.Active : ""}>
+                                      Xizmatlar{xizmatlar}
                                 </Link>
                             </li >
     						<li onClick={() => dispatch(openMenu(false))}>
                                 <Link to="/Courses" className={courses ? classes.Active : ""}>
                                     Kurslar 
-                                </Link>
-                            </li>
-    						<li onClick={() => dispatch(openMenu(false))}>
-                                <Link to="/" className={false ? classes.Active : ""}>
-                                    Hodimlar
                                 </Link>
                             </li>
                             <li onClick={() => dispatch(openMenu(false))}>

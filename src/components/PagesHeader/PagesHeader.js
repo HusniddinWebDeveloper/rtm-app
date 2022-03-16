@@ -4,11 +4,11 @@ import classes from "./PagesHeader.module.css";
 import NavTop from "../NavTop/NavTop";
 import Navbar from "../Navbar/Navbar";
 
-const PagesHeader = ({ bgUrl, title, link, scrollY, haqimizda, home, blog ,contact, courses }) => {
+const PagesHeader = ({ bgUrl, title, link, scrollY, haqimizda, home, xizmatlar, contact, courses, hodimlar }) => {
     return (
         <section className={classes.PagesHeader} style={{backgroundImage: `url(${bgUrl}`}} >
         	<NavTop />
-        	<Navbar scrollY={scrollY} haqimizda={haqimizda} home={home} blog={blog} contact={contact} courses={courses} />
+            <Navbar scrollY={scrollY} haqimizda={haqimizda} home={home} xizmatlar={xizmatlar} hodimlar={hodimlar} contact={contact} courses={courses} />
         	<div className="container">
         		<div className="row">
         			<div className="col-md-12 col-xs-12">
@@ -23,6 +23,7 @@ const PagesHeader = ({ bgUrl, title, link, scrollY, haqimizda, home, blog ,conta
         			</div>
         		</div>
         	</div>
+            <div className={classes.opasicty}></div>
         </section>
     );
 };

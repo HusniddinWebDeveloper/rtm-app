@@ -1,25 +1,31 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from "./Xizmatlar.module.css";
-import XizmatlarData from "./XizmatlarData";
 import XizmatlarItem from "./XizmatlarItem/XizmatlarItem";
 import Title from "../Title/Title";
+import {Link} from "react-router-dom";
+import { useFetch } from "../useFetch/useFetch";
+import iconServices from "../../assets/imgs/services.svg";
 
-const Xizmatlar = () => {
-	const [data] = useState(XizmatlarData);
+const Xizmatlar = ({url, page}) => {
+	const { data, loaded } = useFetch(url);
     return (
         <>
         	<section className={classes.CoursesSection} >
-        		<Title title={"Bizning Xizmatlar"} colorTitle={"#18377D"} />
+				<Title icon={<img src={iconServices} alt="iconServices" />} title={"Bizning Xizmatlar"} colorTitle={"#00a85a"} />
 
         		<div className="container">
 	    			<div className="row">
-	    				{data.map((item,index) => {
-	    					return <XizmatlarItem key={item.id} delay={index} imgUrl={item.imgUrl} linkText={item.linkText} linkUrl={item.linkUrl} subtext={item.subtext} icon={item.icon} />
-	    				})}
+	    				{!loaded ? data.map((item,index) => {
+	    					return <XizmatlarItem key={item.id} delay={index} imgUrl={item.image} linkText={item.name} linkUrl={"/"} subtext={item.price} icon={item.icon} />
+	    				}) : ""}
 	    			</div>
-	    			<div className={classes.CoursesBtn} >
-	    				<a href="/" data-aos="fade-up">VIEW ALL CATEGORIES</a>
-	    			</div>
+	    			{page ? 
+	    				"":
+		    			<div className={classes.CoursesBtn} >
+		    				<Link to="/Xizmatlar" data-aos="fade-up">BARCHASINI KORISH</Link>
+		    			</div>
+		    		}
+	    			
     			</div>
         	</section>
         </>

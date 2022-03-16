@@ -1,34 +1,37 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from "./SelectCourses.module.css";
-import SelectCoursesData from "./SelectCoursesData";
-import SelectCoursesItem from "./SelectCoursesItem/SelectCoursesItem";
 import Title from "../Title/Title";
+import { BsBook } from "react-icons/bs"
+import { useFetch } from "../useFetch/useFetch";
+import CousesItem from "../CoursesSearch/CoursesItem/CoursesItem";
+import {Link} from "react-router-dom";
 
 const SelectCourses = () => {
-	const [data] = useState(SelectCoursesData);
+    const { data, loaded } = useFetch("https://ilyosbek.uz/rtm/api/course/get/random");
     return (
         <>
         	<section className={classes.SelectCoursesSection} >
-        		<Title title={"Bizning Kurslarimiz"} colorTitle={"#18377D"} />
+                <Title icon={<BsBook />} title={"Bizning Kurslarimiz"} colorTitle={"#00a85a"} />
 
         		<div className="container">
 	    			<div className="row">
-                        {data.map((item,index) => {
-                            return <SelectCoursesItem 
-                                        key={item.id}
-                                        imgUrl={item.imgUrl} 
-                                        linkText={item.linkText} 
-                                        linkUrl={item.linkUrl}
-                                        price={item.price}
-                                        raiting={item.raiting}
-                                        students={item.students}
-                                        lessons={item.lessons}
-                                        stars={item.stars}
-                                        delay={index}  />
-                        })}
+                        {!loaded ? data.map((item, index) => {
+                            return <CousesItem
+                                key={item.id}
+                                id={item.id}
+                                image={item.image}
+                                duration={item.duration}
+                                description={item.description}
+                                price={item.price}
+                                name={item.name}
+                                delay={index}
+                            />
+                        }) :
+                            <span>Kurslar topilmadi</span>
+                        }
 	    			</div>
 	    			<div className={classes.CoursesBtn} data-aos="fade-up">
-	    				<a href="/">VIEW ALL Courses</a>
+	    				<Link to="/Courses">BARCHASINI KORISH</Link>
 	    			</div>
     			</div>
         	</section>

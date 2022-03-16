@@ -28,15 +28,15 @@ const NavTop = () => {
 	        				</div>
 	        				<div className={classes.Right} >
 	        					<div className={classes.LogIn} >
-	        						<Link to="/">
+	        						<Link to="/Contact">
 	        							<span><BiLogIn /></span>
 	        							 Kirish / Register
 	        						</Link>
 	        					</div>
 	        					<div className={classes.apply} >
-	        						<Link to="/">
+									<a href="tel:998 (73) 254-24-04">
 	        							Hoziroq bog'lanish
-	        						</Link>
+	        						</a>
 	        					</div>
 	        				</div>
 	        			</div>

@@ -16,11 +16,15 @@
 	font-weight: bold;
 	font-size: 38.2247px;
 	line-height: 45px;
-	color: #18377D;
+	color: #00a85a;
 }
 
 .Title h2 span {
 	margin-right: 10px;
+}
+
+.Title h2 span svg {
+	transform: translateY(5px);
 }
 
 .item {
@@ -43,14 +47,14 @@
 	font-weight: bold;
 	font-size: 20.0298px;
 	line-height: 23px;
-	color: #18377D;
+	color: #00a85a;
 }
 
 .item span {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 66.6207px;
+	font-size: 50px;
 	line-height: 78px;
 	color: #000000;
 }
@@ -80,10 +84,20 @@
 }
 
 .item:hover {
-	box-shadow: 2px 4px 21px rgba(147, 147, 147, 0.25);
+	box-shadow: 0px 0px 21px rgba(147, 147, 147, 0.25);
+	transform: scale(1.03);
+	background-color: #fff;
 }
 
 
 .item {
 	margin-bottom: 2rem;
+}
+
+
+@media(max-width: 48em) {
+	.item:hover {
+		box-shadow: 0px 0px 20px 10px rgba(147, 147, 147, 0.25);
+		transform: scale(1);
+	}
 }
